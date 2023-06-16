@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檢疫局 抓漏專家培育計畫</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="shortcut icon" href="./images/logo_2_.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.2/lottie.min.js"
+        integrity="sha512-R47oG09eydaf225nXyDdSWJ8frKwxkC7QIHXdPpbUx9KaAiC6akjpWxTBw1hb7whk7P2sJNuRhS2ljSBegnIPA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+TC:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="preload" as="image" href="./images/bg.png">
+    <link rel="preload" as="image" href="./images/table/start_img.png">
+    <link rel="preload" as="image" href="./images/table/img_1.png">
+    <link rel="preload" as="image" href="./images/table/img_2.png">
+    <link rel="preload" as="image" href="./images/phone/start_img.png">
+    <link rel="preload" as="image" href="./images/phone/img_1.png">
+    <link rel="preload" as="image" href="./images/phone/img_2.png">
+    <link rel="preload" as="image" href="./images/phone/form_img.png">
+    <link rel="preload" as="audio" href="./music/game_music.mp3">
+    <link rel="preload" as="audio" href="./music/correct_down.mp3">
+    <link rel="preload" as="audio" href="./music/mistake.mp3"> -->
+</head>
+
+<body>
+    <header>
+        <div class="header_logo">
+            <a class="header_a" href="./index.html">
+                <img src="./images/logo_1.png" alt="">
+            </a>
+            <label for="nav-toggle" class="ham">
+                <div class="ham-origin">
+                    <div class="ham-bar ham-bar--top"></div>
+                    <div class="ham-bar ham-bar--middle"></div>
+                    <div class="ham-bar ham-bar--bottom"></div>
+                </div>
+            </label>
+        </div>
+        <input id="nav-toggle" type="checkbox">
+        <div class="header_link_all">
+            <div class="header_link" id="header_home">
+                <div class="header_link_title">首頁</div>
+                <div class="header_link_line"></div>
+            </div>
+            <a class="header_link" id="header_act" href="./activity.html">
+                <div class="header_link_title">活動辦法</div>
+                <div class="header_link_line"></div>
+            </a>
+            <a class="header_link" id="header_lott" href="./lottery.html">
+                <div class="header_link_title">抽獎公布</div>
+                <div class="header_link_line"></div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main_container">
+            <div class="count" id="count">
+                <div class="count_num_all">
+                    <div class="count_num" id="count_num">10</div>&ensp;
+                    <div class="count_num">sec</div>
+                </div>
+            </div>
+            <div class="score" id="score">
+                <div class="score_num">000</div>
+            </div>
+            <div id="game_start">
+                <div id="startbtn"></div>
+                <div id="game_start_dialogbox">
+                    <div id="game_start_txt">為增進民眾對於國際快遞或郵包途徑之檢疫宣導知曉度，讓民眾更了解違規動植物產品，提升防檢疫相關資訊認知</div>
+                </div>
+            </div>
+            <div id="game_round1">
+                <div id="game1_start"></div>
+                <div id="game1_end"></div>
+                <div id="game2_start"></div>
+                <div id="game2_end"></div>
+                <div id="pack_all">
+                    <div class="img_100" id="box_1_1"><img src="./images/box_1_1.png" alt="box_1_1"></div>
+                    <div class="img_100" id="box_1_2"><img src="./images/box_1_2.png" alt="box_1_2"></div>
+                    <div class="img_100" id="box_1_3"><img src="./images/box_1_3.png" alt="box_1_3"></div>
+                </div>
+                <div id="pack_all_02">
+                    <div class="img_100" id="box_2_1"><img src="./images/box_2_1.png" alt="box_2_1"></div>
+                    <div class="img_100" id="box_2_2"><img src="./images/box_2_2.png" alt="box_2_2"></div>
+                    <div class="img_100" id="box_2_3"><img src="./images/box_2_3.png" alt="box_3_3"></div>
+                </div>
+                <div class="img_100" id="dog01"><img src="./images/dog.png" alt="dog"></div>
+                <div class="img_100" id="dog02"><img src="./images/dog_2.png" alt="dog2"></div>
+                <div class="img_100" id="dog03"><img src="./images/dog_2.png" alt="dog3"></div>
+                <div class="img_100" id="left_ip"><img src="./images/people.png" alt="people"></div>
+                <div class="game_round_dialogbox" id="round01_dialogbox">
+                    <div class="game_round_dialogbox_all">
+                        <div class="game_round_title">協助檢疫犬發現可疑包裹！</div>
+                        <div class="game_round_txt">
+                            防檢局的護國神犬們，會在包裹輸送帶上嗅聞檢查，若狗狗在包裹前坐下，請幫忙將包裹挑選出來，讓我們進一步檢查！<span>找到可疑包裹加5分！</span></div>
+                        <div class="game_round_start_btn" id="round01_start_btn">開始遊戲</div>
+                    </div>
+                </div>
+                <div class="add_5 img_100" id="add_01"><img src="./images/plus_five.png" alt="plus_five"></div>
+                <div class="add_5 img_100" id="add_02"><img src="./images/plus_five.png" alt="plus_five"></div>
+                <div class="success_circle img_100" id="success01"><img src="./images/correct_icon.png"
+                        alt="correct_icon"></div>
+                <div class="mistake img_100" id="mistake_left01"><img src="./images/wrong_icon.png" alt="wrong_icon">
+                </div>
+                <div class="mistake img_100" id="mistake_right01"><img src="./images/wrong_icon.png" alt="wrong_icon">
+                </div>
+                <div class="success_circle img_100" id="success02"><img src="./images/correct_icon.png"
+                        alt="correct_icon"></div>
+                <div class="mistake img_100" id="mistake_left02"><img src="./images/wrong_icon.png" alt="wrong_icon">
+                </div>
+                <div class="mistake img_100" id="mistake_right02"><img src="./images/wrong_icon.png" alt="wrong_icon">
+                </div>
+            </div>
+            <div id="game_round2">
+                <div class="img_100" id="left_ip_2"><img src="./images/people_dog_1.png" alt="people_dog_1"></div>
+                <div id="round2_q1">
+                    <div class="img_100" id="round2_q1_box"><img src="./images/second_box_1.png" alt="box_1_1"></div>
+                    <div class="img_100" id="round2_q1_facemask"><img src="./images/facemask.png" alt="face mask"></div>
+                    <div class="img_100" id="round2_q1_potatochips"><img src="./images/potatochips.png" alt="potato chips"></div>
+                    <div class="img_100" id="round2_q1_chocolate"><img src="./images/chocolate.png" alt="chocolate"></div>
+                    <div class="img_100" id="round2_q1_dogfood"><img src="./images/dogfood.png" alt="dog food"></div>
+                </div>
+                <div id="                  ÷≥">
+                    <div class="img_100" id="round2_q2_box"><img src="./images/second_box_2.png" alt="box_1_1"></div>
+                    <div class="img_100" id="round2_q2_coffee"><img src="./images/coffee.png" alt="coffee"></div>
+                    <div class="img_100" id="round2_q2_sausage"><img src="./images/sausage.png" alt="sausage"></div>
+                    <div class="img_100" id="round2_q2_egg"><img src="./images/egg.png" alt="egg"></div>
+                    <div class="img_100" id="round2_q2_noodle"><img src="./images/noodle.png" alt="noodle"></div>
+                </div>
+                <div id="round2_q3">
+                    <div class="img_100" id="round2_q3_box"><img src="./images/second_box_1.png" alt="box_1_1"></div>
+                    <div class="img_100" id="round2_q3_vegetable"><img src="./images/vegetable.png" alt="vegetable"></div>
+                    <div class="img_100" id="round2_q3_peanut"><img src="./images/peanut.png" alt="peanut"></div>
+                    <div class="img_100" id="round2_q3_plant"><img src="./images/plant.png" alt="plant"></div>
+                    <div class="img_100" id="round2_q3_detergent"><img src="./images/detergent.png" alt="detergent"></div>
+                </div>
+                <div class="game_round_dialogbox" id="round02_dialogbox">
+                    <div class="game_round_dialogbox_all">
+                        <div class="game_round_title">協助檢疫官搜查違禁動植物產品！</div>
+                        <div class="game_round_txt">
+                            可疑的包裹被檢疫犬找出後，要請你(妳)幫忙檢疫官，找出不應輸入的動植物產品，一起守護國內動植及農業生產環境！<span>找到違規品一項加5分！</span>
+                        </div>
+                        <div class="game_round_start_btn" id="round02_start_btn">開始遊戲</div>
+                    </div>
+                </div>
+                <div class="next_box" id="next_box_01"></div>
+                <div id="more_all">
+                    <div class="more">
+                        <div class="more_txt">想了解更多</div>
+                        <div class="img_100" id="more_btn"><img src="./images/more_icon.png" alt="more_icon"></div>
+                    </div>
+                    <a href="#" id="not_goods">不能輸入的動植物產品名稱</a>
+                </div>
+            </div>
+
+
+            <div id="game_form">
+                <!-- 參加抽獎表單 -->
+                <div class="game_form_block">
+                    <div class="game_form_orange">
+                        <div>
+                            <div class="game_form_title">
+                                挑戰成功！參加抽獎
+                            </div>
+                            <div class="game_form_title_2">
+                                留下資料有機會獲得精美紀念品
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_main_content" id="gameForm">
+                        <form action="" method="post" class="game_form">
+                            <div class="form-example">
+                                <!-- <label class="game_label" for="name">姓名</label> -->
+                                <input class="game_input" type="text" name="name" id="name" minlength="2" maxlength="20"
+                                    placeholder="姓名" required />
+                                <div class="exclamation_word" id="exclamation_mark1">
+                                    姓名為必填欄位
+                                </div>
+                            </div>
+                            <div class="form-example">
+                                <!-- <label class="game_label" for="phone">手機</label> -->
+                                <input class="game_input" type="tel" name="phone" id="tel" minlength="10" maxlength="10"
+                                    placeholder="電話" pattern="[0]{1}[9]{1}[0-9]{8}" required />
+                                <div class="exclamation_word" id="exclamation_mark2">
+                                    電話號碼為10碼
+                                </div>
+                            </div>
+                            <div class="form-example">
+                                <!-- <label class="game_label" for="email">Email</label> -->
+                                <input class="game_input" type="email" name="email" id="email" placeholder="Email"
+                                    required />
+                                <div class="exclamation_word" id="exclamation_mark3">
+                                    email格式不符合
+                                </div>
+                            </div>
+                            <div class="form_all_btn">
+                                <div class="write_lott_btn" id="gameFormRepeat">
+                                    <input class="write_lott_input" type="button" value="再玩一次" />
+                                </div>
+                                <div class="write_lott_btn" id="gameFormSubmit">
+                                    <input class="write_lott_input" type="button" value="送出" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="game_completed" id="gameFormDone">
+                <div class="game_completed_block">
+                    <div class="game_completed_orange">填單完成</div>
+                    <div class="game_completed_content">
+                        <div class="game_completed_text">
+                            收到您的聯絡資訊囉！將於民國112年xx月xx日公布得獎名單。
+                        </div>
+                        <div class="game_completed_btn" id="gameCompletedBtn">
+                            <input class="write_lott_input" type="button" value="確定" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer_all">
+            <div class="footer_icon pc_img">
+                <img src="./images/logo_2.png" alt="" />
+            </div>
+            <div class="footer_text pc_img">
+                行政院農業委員會 動植物防檢疫局 版權所有©copyright 2023
+            </div>
+            <div class="mb_img">
+                <div class="footer_icon">
+                    <img src="./images/logo_2_mb.png" alt="" />
+                </div>
+                <div class="footer_text">
+                    行政院農業委員會 動植物防檢疫局<br>版權所有©copyright 2023
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const game1Start = lottie.loadAnimation({
+            container: game1_start,
+            animType: "svg",
+            loop: false,
+            autoplay: false,
+            path: "./images/Q1_start/game1_start.json",
+        });
+        const game1End = lottie.loadAnimation({
+            container: game1_end,
+            animType: "svg",
+            loop: false,
+            autoplay: false,
+            path: "./images/Q1_end/game1_end.json",
+        });
+        const game2Start = lottie.loadAnimation({
+            container: game2_start,
+            animType: "svg",
+            loop: false,
+            autoplay: false,
+            path: "./images/Q2_start/game2_start.json",
+        });
+        const game2End = lottie.loadAnimation({
+            container: game2_end,
+            animType: "svg",
+            loop: false,
+            autoplay: false,
+            path: "./images/Q2_end/game2_end.json",
+        });
+        document.getElementById('round01_start_btn').addEventListener('click', () => {
+            document.getElementById('game1_start').style.display = 'block';
+            document.getElementById('round01_dialogbox').style.display = 'none';
+            document.getElementById('dog01').style.display = 'none';
+            game1Start.play();
+            setTimeout(() => {
+                game1Start.stop();
+                document.getElementById('pack_all').style.display = 'flex'
+                document.getElementById('game1_start').style.display = 'none';
+                document.getElementById('dog02').style.display = 'block';
+            }, 6170);
+        });
+        document.getElementById('box_1_1').addEventListener('click', () => {
+            document.getElementById('mistake_left01').style.display = 'block';
+        });
+        document.getElementById('box_1_3').addEventListener('click', () => {
+            document.getElementById('mistake_right01').style.display = 'block';
+        })
+        document.getElementById('box_1_2').addEventListener('click', () => {
+            document.getElementById('dog02').style.display = 'none';
+            document.getElementById('add_01').style.display = 'block';
+            document.getElementById('game1_end').style.display = 'block';
+            document.getElementById('success01').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('add_01').style.display = 'none';
+                // console.log('1')
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById('pack_all').style.display = 'none';
+                document.getElementById('success01').style.display = 'none';
+                document.getElementById('mistake_left01').style.display = 'none';
+                document.getElementById('mistake_right01').style.display = 'none';
+                game1End.play();
+            }, 1500);
+            setTimeout(() => {
+                game1End.stop();
+                document.getElementById('game1_end').style.display = 'none';
+                document.getElementById('game2_start').style.display = 'block';
+                game2Start.play();
+            }, 4500);
+            setTimeout(() => {
+                game2Start.stop();
+                document.getElementById('pack_all_02').style.display = 'flex';
+                document.getElementById('dog03').style.display = 'block';
+                document.getElementById('game2_start').style.display = 'none';
+            }, 10670);
+        });
+        document.getElementById('box_2_1').addEventListener('click', () => {
+            document.getElementById('mistake_right02').style.display = 'block';
+        });
+        document.getElementById('box_2_2').addEventListener('click', () => {
+            document.getElementById('mistake_left02').style.display = 'block';
+        });
+        document.getElementById('box_2_3').addEventListener('click', () => {
+            document.getElementById('dog03').style.display = 'none';
+            document.getElementById('add_02').style.display = 'block';
+            document.getElementById('game2_end').style.display = 'block';
+            document.getElementById('game2_start').style.display = 'none';
+            document.getElementById('success02').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('add_02').style.display = 'none';
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById('pack_all_02').style.display = 'none';
+                document.getElementById('success02').style.display = 'none';
+                document.getElementById('mistake_left02').style.display = 'none';
+                document.getElementById('mistake_right02').style.display = 'none';
+                game2End.play();
+            }, 1500);
+            setTimeout(() => {
+                // game2End.stop();
+                document.getElementById('game_round1').classList.add('fade_out');
+                setTimeout(() => {
+                    document.getElementById('game_round1').style.display = 'none';
+                    // document.getElementById('game_round2').style.display = 'block';
+                    // document.getElementById('round02_dialogbox').style.display = 'flex';
+                    // document.getElementById('game_round2').classList.add('fade_in');
+                }, 800);
+            }, 4500);
+        });
+    </script>
+    <!-- =================  串接資料庫 ================= -->
+    <script>
+        const gameFormSubmit = document.getElementById("gameFormSubmit");
+        gameFormSubmit.addEventListener("click", function () {
+            checkForm();
+        });
+        function checkForm() {
+            let is_error = false;
+            $("#name").val($("#name").val().replace(/'- /g, ""));
+            $("#tel").val($("#tel").val().replace(/'- /g, ""));
+            $("#email").val($("#email").val().replace(/'- /g, ""));
+
+            if (
+                $("#name").val() == "" ||
+                $("#name").val().length < 2 ||
+                !$("#name")
+                    .val()
+                    .match(/^[\p{L}a-zA-Z\u4E00-\u9FFF]+$/)
+            ) {
+                // $("#name").addClass("input_bg_color");
+                $("#exclamation_mark1").css("display", "block");
+                is_error = true;
+            } else {
+                // $("#name").removeClass("input_bg_color");
+                $("#exclamation_mark1").css("display", "none");
+            }
+            if (
+                $("#tel").val() == "" ||
+                $("#tel").val().length > 10 ||
+                $("#tel").val().length < 10 ||
+                !$("#tel")
+                    .val()
+                    .match(/^09\d{8}/)
+            ) {
+                // $("#tel").addClass("input_bg_color");
+                $("#exclamation_mark2").css("display", "block");
+                is_error = true;
+            } else {
+                // $("#tel").removeClass("input_bg_color");
+                $("#exclamation_mark2").css("display", "none");
+            }
+            if (
+                $("#email").val() == "" ||
+                !$("#email")
+                    .val()
+                    .match(
+                        /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/
+                    )
+            ) {
+                // $("#email").addClass("input_bg_color");
+                $("#exclamation_mark3").css("display", "block");
+                is_error = true;
+            } else {
+                // $("#email").removeClass("input_bg_color");
+                $("#exclamation_mark3").css("display", "none");
+            }
+            if (!is_error) {
+                let name = $("#name").val(),
+                    tel = $("#tel").val(),
+                    email = $("#email").val();
+                $("#gameFormSubmit").off("click");
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    dataType: "jsonp",
+                    url: "https://www.sales-frontier.com/adform/cpami2023event/action1.php",
+                    data: {
+                        name: name,
+                        email: email,
+                        tel: tel,
+                    },
+                    jsonp: "mycallback",
+                    jsonpCallback: "result",
+                    success: function (data) {
+                        console.log(data);
+                        var result = data;
+                        if (result.success == true) {
+                            console.log($("#gameForm"));
+                            // alert('ddd')
+                            $("#game_form").css({
+                                display: "none",
+                            });
+                            document.getElementById(
+                                "gameForm"
+                            ).style.display = "none";
+                            console.log($("#gameForm"));
+                            $("#gameFormDone").css({
+                                display: "flex",
+                            });
+                            // $("#lott_try_again").css({
+                            //     'display': 'flex'
+                            // })
+                        }
+                    },
+                    error: (err) => {
+                        console.log(err);
+                    },
+                });
+            } else {
+                $("#gameFormSubmit").one("click", function () {
+                    checkForm();
+                });
+            }
+        }
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/phone.js"></script>
+</body>
+
+</html>

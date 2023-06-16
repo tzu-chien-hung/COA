@@ -1,0 +1,29 @@
+
+.pc_img {
+    display: flex;
+}
+
+.mb_img {
+    display: none;
+}
+
+.pc_img img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.mb_img img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+@media (max-width: 767.98px) {
+.pc_img {
+    display: none;
+}
+
+.mb_img {
+    display: flex;
+}
+
+}

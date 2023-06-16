@@ -1,0 +1,1186 @@
+@import './common/header.css';
+@import './common/footer.css';
+@import './common/lott_popup.css';
+@import './common/activity.css';
+@import './common/common.css';
+
+main {
+    background-image: url(../images/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+}
+
+.main_container {
+    position: relative;
+    width: 730px;
+    height: 730px;
+    background-color: #FFFFFF;
+}
+
+.img_100 img {
+    width: 100%;
+}
+
+.count {
+    background-image: url(../images/time.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 213px;
+    height: 82px;
+    position: absolute;
+    z-index: 10;
+    left: 240px;
+    top: 8px;
+}
+
+.count_num_all {
+    height: 82px;
+    position: absolute;
+    left: 100px;
+    top: -2px;
+    display: flex;
+    align-items: center;
+}
+
+.count_num {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.score {
+    background-image: url(../images/score.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 242px;
+    height: 66px;
+    position: absolute;
+    z-index: 10;
+    left: 468px;
+    top: 19px;
+}
+
+.score_num {
+    height: 66px;
+    position: absolute;
+    left: 155px;
+    top: -5px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.fade_in {
+    animation-name: fadein;
+    animation-duration: .8s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade_out {
+    animation-name: fadeout;
+    animation-duration: .8s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+        /* top: 70%; */
+
+    }
+
+    to {
+        opacity: 0;
+        /* top: 50%; */
+    }
+}
+
+@keyframes fadein {
+    from {
+        /* top: 70%; */
+        opacity: 0;
+    }
+
+    to {
+        /* top: 50%; */
+        opacity: 1;
+    }
+}
+
+/* =============== 開始頁面 =============== */
+#game_start {
+    background-image: url(../images/game_start.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#game_start_dialogbox {
+    background-image: url(../images/dialogbox_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 364px;
+    height: 200.5px;
+    position: absolute;
+    right: 19px;
+    bottom: 44px;
+    animation: 1s blink ease-out;
+}
+
+#game_start_txt {
+    position: absolute;
+    right: 16px;
+    bottom: 19px;
+    width: 325px;
+    font-size: 24px;
+    line-height: 35px;
+    color: #5E895E;
+}
+
+#startbtn {
+    background-image: url(../images/startbtn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 33px;
+    top: 345px;
+    width: 255px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#startbtn:hover {
+    background-image: url(../images/startbtn_hover.png);
+}
+
+/* =============== 開始頁面 =============== */
+/* =============== 第一關頁面 =============== */
+@keyframes add_animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+#game_round1 {
+    background-image: url(../images/game_\ first.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: url(../images/sight.png)55 55, auto;
+}
+
+#game1_start,
+#game1_end,
+#game2_start,
+#game2_end {
+    height: 100%;
+    display: none;
+}
+
+#left_ip {
+    width: 238px;
+    position: absolute;
+    bottom: -32px;
+    left: 18px;
+}
+
+.game_round_dialogbox {
+    background-image: url(../images/dialogbox_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 549px;
+    height: 314px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 185px;
+    right: 14px;
+    animation: 1s blink ease-out;
+}
+
+.game_round_dialogbox_all {
+    padding-top: 10px;
+}
+
+.game_round_title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 38px;
+    color: #5E895E;
+    text-align: center;
+}
+
+.game_round_txt {
+    margin: 16px auto;
+    width: 448px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #231815;
+}
+
+span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #E16866;
+}
+
+.game_round_start_btn {
+    margin: 0 auto;
+    width: 180px;
+    height: 42px;
+    background: #76A276;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+#dog01 {
+    width: 249px;
+    /* height: 197px; */
+    position: absolute;
+    bottom: 40px;
+    right: 32px;
+}
+
+#dog02 {
+    width: 188px;
+    /* height: 214px; */
+    position: absolute;
+    bottom: 37px;
+    right: 175px;
+    display: none;
+}
+
+#dog03 {
+    width: 189px;
+    /* height: 214px; */
+    position: absolute;
+    bottom: 37px;
+    right: 53px;
+    display: none;
+}
+
+#pack_all {
+    position: relative;
+    top: 372px;
+    left: 202px;
+    width: 450px;
+    /* height: 141px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    display: none;
+    cursor: url(../images/sight.png)10 5, auto;
+}
+
+#box_1_1 {
+    width: 120px;
+    display: flex;
+    align-items: end;
+}
+
+#box_1_2 {
+    width: 190px;
+    display: flex;
+    align-items: end;
+}
+
+#box_1_3 {
+    width: 101.5px;
+    display: flex;
+    align-items: end;
+}
+
+#pack_all_02 {
+    position: relative;
+    top: 511px;
+    left: 214px;
+    width: 427px;
+    /* height: 134px; */
+    display: flex;
+    align-items: end;
+    display: none;
+    cursor: url(../images/sight.png)10 5, auto;
+}
+
+#box_2_1 {
+    width: 132px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: end;
+}
+
+#box_2_2 {
+    position: absolute;
+    width: 108px;
+    left: 125px;
+    display: flex;
+    align-items: end;
+}
+
+#box_2_3 {
+    position: absolute;
+    right: 0;
+    width: 183px;
+    display: flex;
+    align-items: end;
+}
+
+.add_5 {
+    animation: 1.5s add_animation ease-out;
+    position: absolute;
+    width: 80px;
+    display: none;
+}
+
+#add_01 {
+    top: 40%;
+    left: 54%;
+}
+
+#add_02 {
+    top: 40%;
+    left: 69%;
+}
+
+.success_circle,
+.mistake {
+    position: absolute;
+    width: 50px;
+    display: none;
+}
+
+#success01 {
+    top: 44%;
+    left: 56%;
+}
+
+#mistake_left01 {
+    top: 44%;
+    left: 34%;
+}
+
+#mistake_right01 {
+    top: 44%;
+    left: 78%;
+}
+
+#success02 {
+    top: 44%;
+    left: 71%;
+}
+
+#mistake_left02 {
+    top: 44%;
+    left: 51%;
+}
+
+#mistake_right02 {
+    top: 44%;
+    left: 34%;
+}
+
+/* =============== 第一關頁面 =============== */
+/* =============== 第二關頁面 =============== */
+#game_round2 {
+    background-image: url(../images/game_\ second.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    cursor: url(../images/sight.png)10 5, auto;
+    /* display: none; */
+}
+
+#left_ip_2 {
+    width: 329.5px;
+    position: absolute;
+    bottom: -33px;
+    left: 10px;
+}
+
+#more_all {
+    position: absolute;
+    bottom: 33px;
+    right: 22px;
+}
+
+#not_goods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 363px;
+    height: 55px;
+    background: #E16866;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+}
+
+.more_txt {
+    padding-left: 36px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+#more_btn {
+    width: 17px;
+    margin-bottom: 6px;
+}
+
+.next_box {
+    background-image: url(../images/next_box.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 190px;
+    height: 54px;
+    position: absolute;
+    top: 478px;
+    right: 80px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+.next_box:hover {
+    top: 480px;
+    background-image: url(../images/next_box_hover.png);
+}
+
+#round02_dialogbox {
+    display: none;
+}
+
+#round2_q1 {
+    position: relative;
+    top: 140px;
+    left: 295px;
+    width: 353.59px;
+    height: 338.73px;
+    display: none;
+}
+
+#round2_q1_box {
+    position: absolute;
+    bottom: 0;
+    width: 263.31px;
+}
+
+#round2_q1_facemask {
+    position: absolute;
+    top: 35px;
+    left: 87px;
+    width: 144px;
+    z-index: 1;
+}
+
+#round2_q1_potatochips {
+    position: absolute;
+    top: 130px;
+    left: 25px;
+    width: 98px;
+    z-index: 2;
+}
+
+#round2_q1_chocolate {
+    position: absolute;
+    top: 238px;
+    left: 14px;
+    width: 138px;
+    z-index: 3;
+}
+
+#round2_q1_dogfood {
+    position: absolute;
+    top: 193px;
+    left: 205px;
+    width: 121px;
+    z-index: 4;
+}
+
+#round2_q2 {
+    position: relative;
+    top: 187px;
+    left: 210px;
+    width: 434px;
+    height: 265px;
+    border: 1px solid;
+    /* display: none; */
+}
+
+#round2_q2_box {
+    position: absolute;
+    bottom: 0;
+    width: 381.26px;
+}
+
+#round2_q2_coffee {
+    position: absolute;
+    top: -2px;
+    left: 160px;
+    width: 142px;
+    z-index: 1;
+}
+
+#round2_q2_sausage {
+    position: absolute;
+    top: 23px;
+    left: 79px;
+    width: 109px;
+    z-index: 2;
+}
+
+#round2_q2_egg {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    width: 100px;
+    z-index: 3;
+}
+
+#round2_q2_noodle {
+    position: absolute;
+    bottom: -11px;
+    right: 0px;
+    width: 167px;
+    z-index: 4;
+}
+
+#round2_q3 {
+    position: relative;
+    top: 202px;
+    left: 270px;
+    width: 370px;
+    height: 265px;
+    display: none;
+}
+
+#round2_q3_box {
+    position: absolute;
+    top: 0;
+    width: 263.31px;
+}
+
+#round2_q3_vegetable {
+    position: absolute;
+    top: 85px;
+    left: 14px;
+    width: 127px;
+    z-index: 1;
+}
+
+#round2_q3_peanut {
+    position: absolute;
+    top: -12px;
+    left: 35px;
+    width: 100px;
+    z-index: 2;
+}
+
+#round2_q3_detergent {
+    position: absolute;
+    bottom: 24px;
+    left: 250px;
+    width: 108px;
+    z-index: 3;
+}
+
+#round2_q3_plant {
+    position: absolute;
+    bottom: 7px;
+    left: 177px;
+    width: 96px;
+    z-index: 4;
+}
+
+/* =============== 第二關頁面 =============== */
+/* =============== 表單頁面 =============== */
+
+#game_form {
+    display: none;
+}
+
+#gameFormDone {
+    display: none;
+}
+
+/* =============== 表單頁面 =============== */
+@media (max-width: 1600px) {}
+
+@media (max-width: 1439.98px) {}
+
+@media (max-width: 767.98px) {
+    main {
+        background-image: url(../images/bg_mb.png);
+    }
+
+    .main_container {
+        width: 574px;
+        height: 574px;
+    }
+
+    .count {
+        width: 167.48px;
+        height: 64.48px;
+        left: 190px;
+        top: 8px;
+    }
+
+    .count_num_all {
+        height: 64.48px;
+        left: 76px;
+    }
+
+    .score_num {
+        height: 51.9px;
+        left: 123px;
+    }
+
+    .count_num,
+    .score_num {
+        font-size: 19px;
+    }
+
+    .score {
+        width: 190.28px;
+        height: 51.9px;
+        left: 369px;
+        top: 16px;
+    }
+
+    /* 第一關 */
+    #game1_start,
+    #game1_end,
+    #game2_start,
+    #game2_end {
+        /* height: 574px; */
+        display: none;
+    }
+
+    #left_ip {
+        width: 187.14px;
+        bottom: -27px;
+        left: 13px;
+    }
+
+    .game_round_dialogbox {
+        width: 431.68px;
+        height: 246.9px;
+        top: 139px;
+        right: 20px;
+    }
+
+    .game_round_title {
+        font-size: 21.43px;
+        line-height: 31.03px;
+    }
+
+    .game_round_txt {
+        margin: 7.6px auto;
+        width: 360px;
+        font-size: 18.368px;
+        line-height: 24px;
+    }
+
+    .game_round_start_btn {
+        width: 141.53px;
+        height: 33.02px;
+        border-radius: 23.5644px;
+        font-size: 18.368px;
+        line-height: 32px;
+    }
+
+    span {
+        font-size: 18.368px;
+        line-height: 24px;
+    }
+
+    #dog01 {
+        width: 195.79px;
+    }
+
+    #dog02 {
+        width: 147px;
+        bottom: 28px;
+        right: 139px;
+    }
+
+    #dog03 {
+        width: 147px;
+        bottom: 28px;
+        right: 42px;
+    }
+
+    #pack_all {
+        width: 355px;
+        top: 293px;
+        left: 160px;
+    }
+
+    #pack_all_02 {
+        width: 336px;
+        top: 402px;
+        left: 168px;
+    }
+
+    #box_1_1 {
+        width: 94px;
+    }
+
+    #box_1_2 {
+        width: 150.01px;
+    }
+
+    #box_1_3 {
+        width: 81.13px;
+    }
+
+    #box_2_1 {
+        width: 104px;
+    }
+
+    #box_2_2 {
+        width: 85px;
+        left: 95px;
+    }
+
+    #box_2_3 {
+        width: 143px;
+    }
+
+    .success_circle,
+    .mistake {
+        width: 25px;
+    }
+
+    .add_5 {
+        width: 60px;
+    }
+
+    /* 第一關 */
+    /* 第二關開始 */
+    #left_ip_2 {
+        width: 259.09px;
+        bottom: -28px;
+    }
+
+    #round2_q1 {
+        top: 116px;
+        left: 206px;
+        width: 277.05px;
+        height: 260.98px;
+        /* display: none; */
+    }
+
+    #round2_q1_box {
+        width: 202.87px;
+    }
+
+    #round2_q1_facemask {
+        width: 114px;
+        top: 25px;
+        left: 67px;
+    }
+
+    #round2_q1_potatochips {
+        top: 91px;
+        left: 20px;
+        width: 76px;
+    }
+
+    #round2_q1_chocolate {
+        width: 106.32px;
+        top: 181px;
+        left: 17px;
+    }
+
+    #round2_q1_dogfood {
+        width: 92px;
+        top: 145px;
+        left: 164px;
+    }
+
+    .next_box {
+        width: 159px;
+        height: 45px;
+        top: 380px;
+        right: 63px;
+    }
+
+    .next_box:hover {
+        top: 382px;
+
+    }
+
+    #more_all {
+        bottom: 26px;
+        right: 19px;
+    }
+
+    .more_txt,
+    #more_btn {
+        margin-bottom: 3px;
+    }
+
+    #not_goods {
+        width: 285.43px;
+        height: 43.25px;
+        border-radius: 30px;
+        font-size: 20px;
+        line-height: 31.03px;
+    }
+
+    #round2_q2 {
+        width: 340px;
+        height: 210px;
+        top: 145px;
+        left: 168px;
+    }
+
+    #round2_q2_box {
+        width: 298.59px;
+    }
+
+    #round2_q2_coffee {
+        top: -0.5px;
+        left: 122px;
+        width: 111.21px;
+    }
+
+    #round2_q2_sausage {
+        top: 19px;
+        left: 58px;
+        width: 85.36px;
+    }
+
+    #round2_q2_egg {
+        left: 196px;
+        width: 85px;
+    }
+
+    #round2_q2_noodle {
+        width: 136.06px;
+    }
+
+    /* 第二關結束 */
+}
+
+@media (max-width: 575.98px) {
+    .main_container {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .count {
+        width: 29.18vw;
+        height: 11.232vw;
+        left: 32.738vw;
+        top: 1.226vw;
+    }
+
+    .count_num_all {
+        height: 11.232vw;
+        left: 13.066vw;
+    }
+
+    .score_num {
+        height: 9.04vw;
+        left: 21.6vw;
+        top: -0.8vw;
+    }
+
+    .count_num,
+    .score_num {
+        font-size: 3.2vw;
+    }
+
+    .score {
+        width: 33.152vw;
+        height: 9.04vw;
+        left: 63.835vw;
+        top: 2.603vw;
+    }
+
+    /* 第一關開始 */
+    #game1_start,
+    #game1_end,
+    #game2_start,
+    #game2_end {
+        /* height: 100vw; */
+    }
+
+    #left_ip {
+        width: 32.603vw;
+        bottom: -5.067vw;
+        left: 3.467vw;
+    }
+
+    .game_round_dialogbox {
+        width: 75.205vw;
+        height: 43.013vw;
+        top: 23.2vw;
+        right: 5.333vw;
+    }
+
+    .game_round_title {
+        font-size: 3.733vw;
+        line-height: 5.333vw;
+    }
+
+    .game_round_txt {
+        margin: 1.333vw auto;
+        width: 61.6vw;
+        font-size: 3.2vw;
+        line-height: 4.533vw;
+    }
+
+    span {
+        font-size: 3.2vw;
+        line-height: 4.533vw;
+    }
+
+    .game_round_start_btn {
+        width: 24.659vw;
+        height: 5.755vw;
+        border-radius: 6.284vw;
+        font-size: 3.2vw;
+        line-height: 5.5vw;
+    }
+
+    #dog01 {
+        width: 34.109vw;
+        bottom: 4.3vw;
+        right: 4.267vw;
+    }
+
+    #dog02 {
+        width: 26vw;
+        bottom: 4.5vw;
+        right: 24vw;
+    }
+
+    #dog03 {
+        width: 26vw;
+        bottom: 4.5vw;
+        right: 7.2vw;
+    }
+
+    #pack_all {
+        width: 61.6vw;
+        top: 51.2vw;
+        left: 27.733vw;
+    }
+
+    #pack_all_02 {
+        width: 58.4vw;
+        top: 70.15vw;
+        left: 29.333vw;
+    }
+
+    #box_1_1 {
+        width: 17.067vw;
+    }
+
+    #box_1_2 {
+        width: 25.867vw;
+    }
+
+    #box_1_3 {
+        width: 14.133vw;
+    }
+
+    #box_2_1 {
+        width: 17.867vw;
+    }
+
+    #box_2_2 {
+        width: 14.8vw;
+        left: 16.267vw;
+    }
+
+    #box_2_3 {
+        width: 24.8vw;
+    }
+
+    .success_circle,
+    .mistake {
+        width: 5.6vw;
+    }
+
+    .add_5 {
+        width: 14.133vw;
+    }
+
+    /* 第一關結束 */
+    /* 第二關開始 */
+    #left_ip_2 {
+        width: 45.136vw;
+        bottom: -5vw;
+    }
+
+    #round2_q1 {
+        top: 21.06vw;
+        left: 34.93vw;
+        width: 48.267vw;
+        height: 45.333vw;
+        /* display: none; */
+    }
+
+    #round2_q1_box {
+        width: 35.344vw;
+    }
+
+    #round2_q1_facemask {
+        width: 18.667vw;
+        top: 4vw;
+        left: 13vw;
+    }
+
+    #round2_q1_potatochips {
+        top: 15vw;
+        left: 4vw;
+        width: 13.333vw;
+    }
+
+    #round2_q1_chocolate {
+        width: 18.667vw;
+        top: 30vw;
+        left: 3vw;
+    }
+
+    #round2_q1_dogfood {
+        width: 16vw;
+        top: 24.5vw;
+        left: 29vw;
+    }
+
+    .next_box {
+        width: 28.8vw;
+        height: 8vw;
+        top: 66vw;
+        right: 10vw;
+    }
+
+    .next_box:hover {
+        top: 66.02vw;
+    }
+
+    #more_all {
+        bottom: 4.5vw;
+        right: 3.5vw;
+    }
+
+    .more_txt {
+        padding-left: 2.9333vw;
+        font-size: 3.2vw;
+        line-height: 6.133vw;
+    }
+
+    .more_txt,
+    #more_btn {
+        margin-bottom: 0.2vw;
+    }
+
+    #not_goods {
+        width: 49.725vw;
+        height: 7.533vw;
+        font-size: 3.6vw;
+        line-height: 3.6vw;
+    }
+
+    #round2_q2 {
+        width: 60vw;
+        height: 36.8vw;
+        top: 25.5vw;
+        left: 28.5vw;
+    }
+
+    #round2_q2_box {
+        width: 52.533vw;
+    }
+
+    #round2_q2_coffee {
+        top: -0.6vw;
+        left: 22vw;
+        width: 19.373vw;
+    }
+
+    #round2_q2_sausage {
+        top: 2.94vw;
+        left: 11vw;
+        width: 14.872vw;
+    }
+
+    #round2_q2_egg {
+        left: 35vw;
+        width: 14vw;
+    }
+
+    #round2_q2_noodle {
+        width: 21.867vw;
+        bottom: -2vw;
+    }
+    /* 第二關結束 */
+}

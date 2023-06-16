@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="交通部 微型電動二輪車「一騎來找查」" />
+    <meta property="og:title" content="交通部 微型電動二輪車「一騎來找查」" />
+    <meta property="og:description" content="完成「一騎來找查」遊戲後，就有機會獲得好禮！" />
+    <meta property="og:image" content="https://www.motc55168.com.tw/images/line_share.png" />
+    <title>交通部 微型電動二輪車「一騎來找查」</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="preload" as="image" href="./images/bg.png">
+</head>
+
+<body>
+    <header>
+        <div class="header_logo">
+            <a class="header_a" href="./index.html">
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <input id="nav-toggle" type="checkbox">
+        <label for="nav-toggle" class="ham">
+            <div class="ham-origin">
+                <div class="ham-bar ham-bar--top"></div>
+                <div class="ham-bar ham-bar--middle"></div>
+                <div class="ham-bar ham-bar--bottom"></div>
+            </div>
+        </label>
+        <div class="header_link header_link_page">
+            <a href="./index.html"><div class="header_link_activity" id="lottery">回首頁</div></a>
+            <div class="header_link_activity header_link_activity_hover" id="activity">活動辦法</div>
+            <a href="./lottery.html"><div class="header_link_lottery" id="lottery">抽獎公佈</div></a>
+        </div>
+    </header>
+    <div class="bg_blue_color">
+        <div class="act_popup_bg" id="act_popup">
+            <div class="act_title_all">
+                <div class="act_title">活動辦法</div>
+            </div>
+            <div class="act_content_all">
+                <div class="act_content_yellow_bg">
+                    <div class="act_content_yellow_small_title">遊戲說明</div>
+                    <div class="act_content_yellow_content">按照遊戲規則於60秒內找出「4個」錯誤處，過關後完成影片觀看即可填寫個人資料參加抽獎。</div>
+                    <div class="act_content_yellow_small_title act_content_yellow_small_title_2">活動日期</div>
+                    <div class="act_content_yellow_content">即日起至111年11月27日 23:59止。</div>
+                    <div class="act_content_yellow_small_title act_content_yellow_small_title_2">獎品項目</div>
+                    <div class="act_product_all">
+                        <div class="act_product_img"><img src="./images/product1.png" alt="">
+                            <div class="act_product_img_name">果汁機(3名)</div>
+                        </div>
+                        <div class="act_product_img"><img src="./images/product2.png" alt="">
+                            <div class="act_product_img_name">必勝客現金禮券300元(15名) </div>
+                        </div>
+                        <div class="act_product_img"><img src="./images/product3.png" alt="">
+                            <div class="act_product_img_name">7-11商品卡200元(22名)</div>
+                        </div>
+                    </div>
+                    <div class="act_content_yellow_small_title act_content_yellow_small_title_2">注意事項</div>
+                    <div class="act_content_yellow_content">一、本抽獎活動採電腦隨機抽獎，得獎者不得要求兌換現金或其他等值商品，亦不得轉讓、販賣、由他人領獎。<br>
+                        二、得獎者所提供之姓名，連絡電話、地址需完整且真實，若因資料有誤無法收到或招領退回將視同放棄。<br>
+                        三、本活動之參加者或得獎者不得有侵害他人權利（包括但不限於使用自動化程式影響抽獎結果等）或違反法令之情事，如有違反，主辦單位得取消參加或得獎資格並追回獎品。<br>
+                        四、如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使參加者所傳送或登錄之資料有遲延、遺失、錯誤等之情況，主辦單位不負任何法律責任，參加者亦不得因此異議。<br>
+                        五、得獎者應於主辦單位通知之期限內，填妥依主辦單位要求之領獎文件後領取獎項，逾期則視為棄權，不再補發。領獎者所提供之身分證明文件如與得獎者資料不符時，主辦單位得要求得獎者提出相關證明文件，若無證明文件或文件內容不符，主辦單位得取消其得獎資格。<br>
+                        六、本活動獎項以公布於本網站上的資料為準，主辦單位保留更換其他等值獎項之權利。<br>
+                        七、本活動後續涉及個人資料蒐集，若參加視同同意本活動做個人資料蒐集，若選擇不願提供，將無法參加本次活動所提供之相關服務。<br>
+                        八、本活動獎項若需寄送，僅限台澎金馬地區，若為區域外之得獎者，視同放棄該獎項。若因郵寄過程遺失或損壞得獎商品時，主辦單位不另行補發或更換該得獎商品。<br>
+                        九、若您為未滿二十歲之未成年人，須由您的家長（監護人）閱讀、瞭解本活動相關規定，並需經您家長（監護人）同意，您方得參加本活動。若您參加本活動時，即推定您的家長（或監護人）同意您接受本活動相關規定內容及其後修改變更。
+                    </div>
+                    <div class="act_content_yellow_content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_copyright">Copyright ©</div>
+        <div class="footer_a">
+            <img src="./images/logo.png" alt="">
+        </div>
+    </footer>
+</body>
+
+</html>

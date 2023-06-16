@@ -1,0 +1,228 @@
+.act_popup_bg {
+    height: 723px;
+    width: 985px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 4.50954px solid #F4B220;
+    box-shadow: 4.50954px 4.50954px 7.21526px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 100;
+}
+
+.act_title {
+    width: 312.34px;
+    height: 62.47px;
+    position: relative;
+    font-weight: 700;
+    font-size: 32.148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 44.6499px;
+    margin: 10px auto;
+}
+
+.act_title_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.act_content_all {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: calc(100% - 120px);
+    background: #FFE3A5;
+    border-radius: 14px;
+}
+
+.act_content_yellow_bg {
+    height: 100%;
+    padding: 35px 36px;
+    color: #313436;
+    overflow-y: scroll;
+}
+
+.act_content_yellow_small_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+
+.act_content_yellow_small_title_2 {
+    margin-top: 25px;
+}
+
+.act_content_yellow_content {
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 0px;
+    letter-spacing: 0.04em;
+    text-align: justify;
+}
+
+.act_product_all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act_product_img {
+    width: 32%;
+    text-align: center;
+    background: #FFFFFF;
+    border: 2px solid #F4B220;
+    border-radius: 10px;
+}
+
+.act_product_img img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.act_product_img_name {
+    background: #F4B220;
+    border-radius: 0px 0px 5px 5px;
+    font-size: 18px;
+}
+
+@media (max-width: 1440px) {
+    .act_popup_bg {
+        width: 783.13px;
+        height: 570px;
+    }
+
+    .act_title {
+        width: 247.83px;
+        height: 49.57px;
+        font-size: 25.536px;
+        margin: 10px auto;
+    }
+
+    .act_product_img_name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .act_popup_bg {
+        height: 501.26px;
+        width: 750px;
+    }
+
+    .act_title {
+        width: 237.34px;
+        height: 43.54px;
+        font-size: 22px;
+    }
+
+    .act_content_yellow_bg {
+        height: 100%;
+        padding: 27px 36px;
+        color: #313436;
+        overflow-y: scroll;
+    }
+
+    .act_content_yellow_small_title {
+        font-size: 20px;
+        line-height: 26px;
+        padding-bottom: 5px;
+    }
+
+    .act_content_yellow_content {
+        font-size: 16px;
+        line-height: 23px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 767.68px) {
+    .act_popup_bg {
+        max-height: calc(156vw - 160px);
+        height: calc(100vh - 160px);
+        max-width: calc(64.2vh - 83.45px);
+        width: calc(100vw - 64.25px);
+    }
+
+    .act_title {
+        width: 280px;
+        height: 53.33px;
+        font-size: 26px;
+    }
+
+    .act_product_all {
+        display: block;
+    }
+
+    .act_product_img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .act_product_img_name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .act_popup_bg {
+        max-height: calc(156vw - 130px);
+        height: calc(100vh - 130px);
+        max-width: calc(64.2vh - 83.45px);
+        width: calc(100vw - 64.25px);
+    }
+
+    .act_content_yellow_bg {
+        height: 100%;
+        padding: 24px 28px;
+        color: #313436;
+        overflow-y: scroll;
+    }
+
+    .act_content_yellow_content {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .act_product_img_name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 374.98px) {
+    .act_title {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .activity_main2_txt {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .act_title {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .activity_main2_txt {
+        font-size: 18px;
+    }
+
+    .act_content_yellow_content {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .act_product_img_name {
+        font-size: 12px;
+    }
+}
