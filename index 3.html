@@ -124,26 +124,37 @@
                 <div class="img_100" id="left_ip_2"><img src="./images/people_dog_1.png" alt="people_dog_1"></div>
                 <div id="round2_q1">
                     <div class="img_100" id="round2_q1_box"><img src="./images/second_box_1.png" alt="box_1_1"></div>
-                    <div class="img_100 round2_wrong" id="round2_q1_facemask"><img src="./images/facemask.png" alt="face mask"></div>
-                    <div class="img_100 round2_wrong" id="round2_q1_potatochips"><img src="./images/potatochips.png" alt="potato chips"></div>
-                    <div class="img_100 round2_wrong" id="round2_q1_chocolate"><img src="./images/chocolate.png" alt="chocolate">
+                    <div class="img_100 round2_wrong" id="round2_q1_facemask"><img src="./images/facemask.png"
+                            alt="face mask"></div>
+                    <div class="img_100 round2_wrong" id="round2_q1_potatochips"><img src="./images/potatochips.png"
+                            alt="potato chips"></div>
+                    <div class="img_100 round2_wrong" id="round2_q1_chocolate"><img src="./images/chocolate.png"
+                            alt="chocolate">
                     </div>
-                    <div class="img_100 round2_answer" id="round2_q1_dogfood"><img src="./images/dogfood.png" alt="dog food"></div>
+                    <div class="img_100 round2_answer" id="round2_q1_dogfood"><img src="./images/dogfood.png"
+                            alt="dog food"></div>
                 </div>
                 <div id="round2_q2" class="fade_in_round2">
                     <div class="img_100" id="round2_q2_box"><img src="./images/second_box_2.png" alt="box_1_1"></div>
-                    <div class="img_100 round2_wrong" id="round2_q2_coffee"><img src="./images/coffee.png" alt="coffee"></div>
-                    <div class="img_100 round2_answer" id="round2_q2_sausage"><img src="./images/sausage.png" alt="sausage"></div>
+                    <div class="img_100 round2_wrong" id="round2_q2_coffee"><img src="./images/coffee.png" alt="coffee">
+                    </div>
+                    <div class="img_100 round2_answer" id="round2_q2_sausage"><img src="./images/sausage.png"
+                            alt="sausage"></div>
                     <div class="img_100 round2_answer" id="round2_q2_egg"><img src="./images/egg.png" alt="egg"></div>
-                    <div class="img_100 round2_wrong" id="round2_q2_noodle"><img src="./images/noodle.png" alt="noodle"></div>
+                    <div class="img_100 round2_wrong" id="round2_q2_noodle"><img src="./images/noodle.png" alt="noodle">
+                    </div>
                 </div>
                 <div id="round2_q3" class="fade_in_round2">
                     <div class="img_100" id="round2_q3_box"><img src="./images/second_box_1.png" alt="box_1_1"></div>
-                    <div class="img_100 round2_answer" id="round2_q3_vegetable"><img src="./images/vegetable.png" alt="vegetable">
+                    <div class="img_100 round2_answer" id="round2_q3_vegetable"><img src="./images/vegetable.png"
+                            alt="vegetable">
                     </div>
-                    <div class="img_100 round2_answer" id="round2_q3_peanut"><img src="./images/peanut.png" alt="peanut"></div>
-                    <div class="img_100 round2_answer" id="round2_q3_plant"><img src="./images/plant.png" alt="plant"></div>
-                    <div class="img_100 round2_wrong" id="round2_q3_detergent"><img src="./images/detergent.png" alt="detergent">
+                    <div class="img_100 round2_answer" id="round2_q3_peanut"><img src="./images/peanut.png"
+                            alt="peanut"></div>
+                    <div class="img_100 round2_answer" id="round2_q3_plant"><img src="./images/plant.png" alt="plant">
+                    </div>
+                    <div class="img_100 round2_wrong" id="round2_q3_detergent"><img src="./images/detergent.png"
+                            alt="detergent">
                     </div>
                 </div>
                 <div class="game_round_dialogbox" id="round02_dialogbox">
@@ -211,7 +222,7 @@
                         <div class="game_round_txt game_round3_txt">
                             問答題請選出正確答案，離成為抓漏專家不遠了！<span>答對一題加5分！</span>
                         </div>
-                        <div class="game_round_start_btn" id="round02_start_btn">開始遊戲</div>
+                        <div class="game_round_start_btn" id="round03_start_btn">開始遊戲</div>
                     </div>
                 </div>
                 <div id="round3_error_popup">
@@ -219,71 +230,54 @@
                     <div id="round3_correct">
                         <div id="round3_correct_txt">在臉書社團、一頁式網站管道、網購平台皆有可能買到境外動植物產品！</div>
                     </div>
-                    <div id="round3_error_btn">確定</div>
+                    <div class="confirm_btn" id="round3_error_btn">確定</div>
                 </div>
             </div>
-            <div id="game_form">
-                <!-- 參加抽獎表單 -->
-                <div class="game_form_block">
-                    <div class="game_form_orange">
-                        <div>
-                            <div class="game_form_title">
-                                挑戰成功！參加抽獎
-                            </div>
-                            <div class="game_form_title_2">
-                                留下資料有機會獲得精美紀念品
-                            </div>
-                        </div>
-                    </div>
-                    <div class="game_main_content" id="gameForm">
-                        <form action="" method="post" class="game_form">
-                            <div class="form-example">
-                                <!-- <label class="game_label" for="name">姓名</label> -->
+            <div id="game_end">
+                <div id="game_form">
+                    <!-- 參加抽獎表單 -->
+                    <div id="game_form_content">
+                        <div id="game_form_title"></div>
+                        <form action="" method="post" id="form">
+                            <div class="form_row">
+                                <label class="game_label" for="name">姓名：</label>
                                 <input class="game_input" type="text" name="name" id="name" minlength="2" maxlength="20"
-                                    placeholder="姓名" required />
+                                    placeholder="請輸入姓名" required />
                                 <div class="exclamation_word" id="exclamation_mark1">
-                                    姓名為必填欄位
+                                    請輸入中英文姓名
                                 </div>
                             </div>
-                            <div class="form-example">
-                                <!-- <label class="game_label" for="phone">手機</label> -->
+                            <div class="form_row">
+                                <label class="game_label" for="phone">電話：</label>
                                 <input class="game_input" type="tel" name="phone" id="tel" minlength="10" maxlength="10"
-                                    placeholder="電話" pattern="[0]{1}[9]{1}[0-9]{8}" required />
+                                    placeholder="請輸入手機號碼" pattern="[0]{1}[9]{1}[0-9]{8}" required />
                                 <div class="exclamation_word" id="exclamation_mark2">
-                                    電話號碼為10碼
+                                    請輸入正確手機號碼
                                 </div>
                             </div>
-                            <div class="form-example">
-                                <!-- <label class="game_label" for="email">Email</label> -->
-                                <input class="game_input" type="email" name="email" id="email" placeholder="Email"
+                            <div class="form_row">
+                                <label class="game_label" for="email">Email：</label>
+                                <input class="game_input" type="email" name="email" id="email" placeholder="請輸入電子信箱"
                                     required />
                                 <div class="exclamation_word" id="exclamation_mark3">
-                                    email格式不符合
+                                    請輸入正確信箱
                                 </div>
                             </div>
                             <div class="form_all_btn">
-                                <div class="write_lott_btn" id="gameFormRepeat">
-                                    <input class="write_lott_input" type="button" value="再玩一次" />
-                                </div>
-                                <div class="write_lott_btn" id="gameFormSubmit">
-                                    <input class="write_lott_input" type="button" value="送出" />
-                                </div>
+                                <div class="img_100 form_btn form_submit_btn" id="gameFormSubmit"></div>
+                                <div class="img_100 form_btn form_repeat_btn" id="gameFormRepeat"></div>
                             </div>
                         </form>
+                    </div>
+                    <div class="img_100" id="game_form_ip">
+                        <img src="./images/people_dog_3.png" alt="people_dog_3">
                     </div>
                 </div>
             </div>
             <div class="game_completed" id="gameFormDone">
                 <div class="game_completed_block">
-                    <div class="game_completed_orange">填單完成</div>
-                    <div class="game_completed_content">
-                        <div class="game_completed_text">
-                            收到您的聯絡資訊囉！將於民國112年xx月xx日公布得獎名單。
-                        </div>
-                        <div class="game_completed_btn" id="gameCompletedBtn">
-                            <input class="write_lott_input" type="button" value="確定" />
-                        </div>
-                    </div>
+                    <div class="game_completed_text">填單完成</div>
+                    <div class="confirm_btn" id="game_completed_btn">確定</div>
                 </div>
             </div>
         </div>
@@ -517,15 +511,21 @@
         function round2Timer() {
             timerCount -= 1;
             timerRound2Box -= 1;
-            if (timerRound2Box === 0) {
-                timerRound2Box = 10;
-                if (round2State <= 2) {
-                    document.getElementById(`next_box_0${round2State}`).click();
-                    round2State += 1;
-                }
+            if(timerCount === 20 && round2State === 1){
+                document.getElementById(`next_box_01`).click();
+                
+            }else if(timerCount === 10 && round2State === 2){
+                document.getElementById(`next_box_02`).click();
             }
+            // if (timerRound2Box === 0) {
+            //     timerRound2Box = 10;
+            //     if (round2State <= 2) {
+            //         document.getElementById(`next_box_0${round2State}`).click();
+            //         round2State += 1;
+            //     }
+            // }
             if (timerCount === 0) {
-                document.getElementById('next_box_03').click();
+                document.getElementById(`next_box_03`).click();
                 clearInterval(timerRound2);
             }
             countNum.innerText = timerCount;
@@ -547,6 +547,7 @@
         document.getElementById('next_box_01').addEventListener('click', () => {
             document.getElementById('round2_q1').classList.add('fade_out_round2');
             timerRound2Box = 10;
+            round2State = 2
             setTimeout(() => {
                 document.getElementById('round2_q1').style.display = 'none';
                 document.getElementById('round2_q2').style.display = 'block';
@@ -556,6 +557,7 @@
         });
         document.getElementById('next_box_02').addEventListener('click', () => {
             document.getElementById('round2_q2').classList.add('fade_out_round2');
+            round2State = 3
             timerRound2Box = 10;
             setTimeout(() => {
                 document.getElementById('round2_q2').style.display = 'none';
@@ -568,15 +570,16 @@
             //     document.getElementById('round2_q3').style.display = 'none';
             // }, 800);
         });
-        let timerRound3
-        timerCount = 15
-        function timerRound3Function(){
+
+        let timerRound3;
+        function timerRound3Function() {
+            // timerCount = 15;
             timerCount -= 1;
             countNum.innerText = timerCount;
-            if(timerCount === 0){
+            if (timerCount === 0) {
                 clearInterval(timerRound3)
                 alert('結束第三關')
-                
+
             }
         }
         document.getElementById('next_box_03').addEventListener('click', () => {
@@ -585,23 +588,33 @@
             setTimeout(() => {
                 document.getElementById('game_round2').style.display = 'none';
                 document.getElementById('game_round3').style.display = 'block';
-                countNum.innerText = timerCount;
-                timerRound3 = setInterval(timerRound3Function,1000);
+                document.getElementById('round03_dialogbox').style.display = 'flex';
+                clearInterval(timerRound2)
+                timerCount = 15;
+            countNum.innerText = timerCount;
             }, 800);
+        });
+
+        document.getElementById('round03_start_btn').addEventListener('click', () => {
+            document.getElementById('round03_dialogbox').style.display = 'none';
+            // document.getElementById('next_box_01').style.display = 'block';
+            // 開始倒數十五秒
+            timerCount = 15;
+            timerRound3 = setInterval(timerRound3Function, 1000);
         });
         const round3Answer = document.querySelectorAll('.round3_answer')
         const round3Wrong = document.querySelectorAll('.round3_wrong');
         let round3QCount = 1;
-        
-        round3Answer.forEach((item)=>{
-            item.addEventListener('click',()=>{
+
+        round3Answer.forEach((item) => {
+            item.addEventListener('click', () => {
                 console.log('答對囉')
                 addScore(10)
-                switch(round3QCount){
+                switch (round3QCount) {
                     case 1:
                         console.log('答對第一題')
                         console.log('進入第二題')
-                        round3QCount +=1;
+                        round3QCount += 1;
                         break
                     case 2:
                         console.log('答對第二題');
@@ -610,8 +623,8 @@
                 }
             })
         });
-        round3Wrong.forEach((item)=>{
-            item.addEventListener('click',()=>{
+        round3Wrong.forEach((item) => {
+            item.addEventListener('click', () => {
                 clearInterval(timerRound3);
                 alert('逼逼答錯')
 
@@ -630,15 +643,15 @@
         //         }
         // })
 
-        function FinalScore (){
+        function FinalScore() {
             let FinalScoreNum = score - 1000;
-            if(FinalScoreNum < 35){
+            if (FinalScoreNum < 35) {
                 console.log('執行不足三十五分重來')
-            }else{
+            } else {
                 console.log('執行遊戲成功')
             }
         }
-        
+
     </script>
     <!-- =================  串接資料庫 ================= -->
     <script>
@@ -705,7 +718,7 @@
                     type: "POST",
                     async: false,
                     dataType: "jsonp",
-                    url: "https://www.sales-frontier.com/adform/cpami2023event/action1.php",
+                    url: "https://www.sales-frontier.com/adform/baphiq2023event/action1.php",
                     data: {
                         name: name,
                         email: email,
@@ -714,18 +727,18 @@
                     jsonp: "mycallback",
                     jsonpCallback: "result",
                     success: function (data) {
-                        console.log(data);
+                        // console.log(data);
                         var result = data;
                         if (result.success == true) {
-                            console.log($("#gameForm"));
+                            // console.log($("#gameForm"));
                             // alert('ddd')
-                            $("#game_form").css({
-                                display: "none",
-                            });
-                            document.getElementById(
-                                "gameForm"
-                            ).style.display = "none";
-                            console.log($("#gameForm"));
+                            // $("#game_form").css({
+                            //     display: "none",
+                            // });
+                            // document.getElementById(
+                            //     "gameForm"
+                            // ).style.display = "none";
+                            // console.log($("#gameForm"));
                             $("#gameFormDone").css({
                                 display: "flex",
                             });

@@ -70,7 +70,7 @@ a {
     color: #4D4C4C;
 }
 
-.header_link_title:hover {
+.header_link:hover .header_link_title {
     color: #1D2C6A;
 }
 
@@ -88,11 +88,11 @@ a {
     display: none;
 }
 
-#header_home .header_link_title {
+.header_link_now_page .header_link_title {
     color: #1D2C6A;
 }
 
-#header_home .header_link_line {
+.header_link_now_page .header_link_line {
     display: block;
 }
 
