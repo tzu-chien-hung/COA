@@ -274,6 +274,14 @@
                         <img src="./images/people_dog_3.png" alt="people_dog_3">
                     </div>
                 </div>
+                <div id="game_fail">
+                    <!-- 遊戲失敗 -->
+                    <div id="game_fail_title"></div>
+                    <div class="img_100 form_btn form_repeat_btn" id="gameFormRepeat2"></div>
+                    <div class="img_100" id="game_fail_ip">
+                        <img src="./images/people_dog_4.png" alt="people_dog_4">
+                    </div>
+                </div>
             </div>
             <div class="game_completed" id="gameFormDone">
                 <div class="game_completed_block">
@@ -686,8 +694,9 @@
             }, 800);
             let FinalScoreNum = score - 1000;
             if (FinalScoreNum < 35) {
-                console.log('執行不足三十五分重來');
-                alert('不足三十五分 再玩一次')
+                // console.log('執行不足三十五分重來');
+                // alert('不足三十五分 再玩一次')
+                document.getElementById('game_fail').style.display = 'block';
             } else {
                 document.getElementById('game_form').style.display = 'block';
             }
@@ -700,7 +709,11 @@
         //         console.log('執行遊戲成功')
         //     }
         // }
-        document.getElementById('gameFormRepeat').addEventListener('click',()=> {
+        let form_repeat_btn = document.querySelectorAll('.form_repeat_btn')[0];
+        form_repeat_btn.addEventListener('click', () => {
+            window.location.reload();
+        })
+        form_repeat_btn.addEventListener('click', () => {
             window.location.reload();
         })
     </script>

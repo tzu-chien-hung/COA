@@ -221,6 +221,7 @@ main {
     height: 100%;
     display: none;
     cursor: url(../images/sight.png)55 55, auto;
+    overflow: hidden;
 }
 
 #game1_start,
@@ -869,6 +870,7 @@ span {
     top: 74%;
     left: 78%;
 }
+
 .fade_in_round3 {
     animation-name: fadein;
     animation-duration: .8s;
@@ -878,6 +880,7 @@ span {
     animation-name: fadeout;
     animation-duration: .8s;
 }
+
 /* =============== 第三關頁面結束 =============== */
 /* =============== 表單頁面 =============== */
 #game_end {
@@ -1009,6 +1012,7 @@ span {
         opacity: 1;
     }
 }
+
 .game_completed {
     width: 444px;
     height: 217px;
@@ -1036,6 +1040,37 @@ span {
 }
 
 /* =============== 表單頁面 =============== */
+/* =============== 未滿35分頁面 =============== */
+#game_fail {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#game_fail_ip {
+    width: 291.5px;
+    position: absolute;
+    bottom: -4.1%;
+    left: 6%;
+}
+
+#game_fail_title {
+    background-image: url(../images/dialogbox_4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 373px;
+    height: 327px;
+    position: absolute;
+    left: 36%;
+    top: 20%;
+}
+#gameFormRepeat2 {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+}
+/* =============== 未滿35分頁面 =============== */
 @media (max-width: 767.98px) {
     main {
         background-image: url(../images/bg_mb.png);
@@ -1474,19 +1509,34 @@ span {
     .form_submit_btn {
         margin: 39px auto 10px;
     }
+
     .game_completed {
         width: 368.89px;
         height: 154.6px;
         border: 6.7px solid #FFFFFF;
         border-radius: 14.5px;
     }
-    
+
     .game_completed_text {
         font-size: 24.5px;
         line-height: 35.2px;
         margin-bottom: 30.61px;
     }
+
     /* =============== 表單頁面結束 =============== */
+    /* =============== 未滿35分開始 =============== */
+    #game_fail_ip {
+        width: 229.2px;
+        position: absolute;
+        bottom: -4.1%;
+        left: 6%;
+    }
+    #game_fail_title {
+        width: 293.3px;
+        height: 257.12px;
+    }
+
+    /* =============== 未滿35分結束 =============== */
 }
 
 @media (max-width: 575.98px) {
@@ -1936,17 +1986,29 @@ span {
     .form_submit_btn {
         margin: 6.89vw auto 2.66vw;
     }
+
     .game_completed {
-        width: 64.267vw;;
+        width: 64.267vw;
+        ;
         height: 26.93vw;
         border: 1.18vw solid #FFFFFF;
         border-radius: 2.53vw;
     }
-    
+
     .game_completed_text {
         font-size: 4.27vw;
         line-height: 6.13vw;
         margin-bottom: 5.333vw;
     }
+
     /* =============== 表單結束 =============== */
+    /* =============== 未滿35分開始 =============== */
+    #game_fail_ip {
+        width: 39.93vw;
+    }
+    #game_fail_title {
+        width: 51.096vw;
+        height: 44.8vw;
+    }
+    /* =============== 未滿35分結束 =============== */
 }
