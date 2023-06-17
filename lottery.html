@@ -5,456 +5,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:site_name" content="交通部 微型電動二輪車「一騎來找查」" />
-    <meta property="og:title" content="交通部 微型電動二輪車「一騎來找查」" />
-    <meta property="og:description" content="完成「一騎來找查」遊戲後，就有機會獲得好禮！" />
-    <meta property="og:image" content="https://www.motc55168.com.tw/images/line_share.png" />
-    <title>交通部 微型電動二輪車「一騎來找查」</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <title>檢疫局 抓漏專家培育計畫 抽獎公告</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="preload" as="image" href="./images/bg.png">
-    <link rel="preload" as="image" href="./images/table/draw_bg.png">
-    <link rel="preload" as="image" href="./images/table/road_bg.png">
-    <link rel="preload" as="image" href="./images/phone/draw_bg.png">
-    <link rel="preload" as="image" href="./images/phone/road_bg.png">
+    <link rel="shortcut icon" href="./images/logo_2_.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+TC:wght@500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="header_logo">
             <a class="header_a" href="./index.html">
-                <img src="./images/logo.png" alt="">
+                <img src="./images/logo_1.png" alt="">
             </a>
+            <label for="nav-toggle" class="ham">
+                <div class="ham-origin">
+                    <div class="ham-bar ham-bar--top"></div>
+                    <div class="ham-bar ham-bar--middle"></div>
+                    <div class="ham-bar ham-bar--bottom"></div>
+                </div>
+            </label>
         </div>
         <input id="nav-toggle" type="checkbox">
-        <label for="nav-toggle" class="ham">
-            <div class="ham-origin">
-                <div class="ham-bar ham-bar--top"></div>
-                <div class="ham-bar ham-bar--middle"></div>
-                <div class="ham-bar ham-bar--bottom"></div>
-            </div>
-        </label>
-        <div class="header_link header_link_page">
-            <a href="./index.html">
-                <div class="header_link_activity" id="lottery">回首頁</div>
+        <div class="header_link_all">
+            <a href="./index.html" class="header_link" id="header_home">
+                <div class="header_link_title">首頁</div>
+                <div class="header_link_line"></div>
             </a>
-            <a href="./activity.html">
-                <div class="header_link_activity" id="activity">活動辦法</div>
+            <a class="header_link" id="header_act" href="./activity.html">
+                <div class="header_link_title">活動辦法</div>
+                <div class="header_link_line"></div>
             </a>
-            <div class="header_link_lottery header_link_lottery_hover" id="lottery">抽獎公佈</div>
+            <a class="header_link header_link_now_page" id="header_lott" href="./lottery.html">
+                <div class="header_link_title">抽獎公布</div>
+                <div class="header_link_line"></div>
+            </a>
         </div>
     </header>
-    <div class="bg_blue_color">
-        <div class="lott_popup_bg" id="lott_popup">
-            <div class="lott_popup_all">
-                <div class="lott_top_img">
-                    <img id="lott_top_img" src="./images/table/draw_bg.png" alt="">
+    <main>
+        <div class="act_popup_bg" id="act_popup">
+            <div class="act_title_all">
+                <div class="act_title">抽獎得獎名單</div>
+            </div>
+            <div class="lott_content_all">
+                    <div class="activity_main2_border">
+                        <table border="1" id="table_1">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>電話</th>
+                                    <th>獎項名稱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">陳OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">LinePoints <br>5000點</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">LinePoints <br>5000點</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">LinePoints <br>5000點</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>電話</th>
+                                    <th>獎項名稱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">陳OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                                <tr class="table_tr">
+                                    <td class="table_td_1">劉OO</td>
+                                    <td class="table_td">0963OOOO80</td>
+                                    <td class="table_td table_td_3">貝果萬年曆</td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer_all">
+            <div class="footer_icon pc_img">
+                <img src="./images/logo_2.png" alt="" />
+            </div>
+            <div class="footer_text pc_img">
+                行政院農業委員會 動植物防檢疫局 版權所有©copyright 2023
+            </div>
+            <div class="mb_img">
+                <div class="footer_icon">
+                    <img src="./images/logo_2_mb.png" alt="" />
                 </div>
-                <div class="lott_bottom_img">
-                    <img id="lott_bottom_img" src="./images/table/road_bg.png" alt="">
-                </div>
-                <div class="lott_right_img">
-                    <img src="./images/scooter.png" alt="">
-                </div>
-                <div class="lott_title">抽獎名單公布</div>
-                <div class="activity_main2_txt">
-                    恭喜以下得獎者，活動將於今日起發送得獎人通知信至您的EMAIL，請於2022年12月4日（週日）12:00前，依照信件內容提供相關資料，逾時未提供者，視同自動棄權，後續將由備取名單依序遞補。
-                    <p class="p_red">注意！備取名單非得獎名單，若有中獎人喪失中獎資格時，才會由專人依序致電與備取者聯繫。</p>
-                </div>
-                <div class="activity_main2_border">
-                    <table border="1" data-aos="left-in">
-                        <thead>
-                            <tr>
-                                <th>姓名</th>
-                                <th>EMAIL</th>
-                                <th>獎項名稱</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○玲</td>
-                                <td class="table_td">tfd***@gmail.com</td>
-                                <td class="table_td">果汁機</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">徐○嬣</td>
-                                <td class="table_td">blayke960***@gmail.com</td>
-                                <td class="table_td">果汁機</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○華</td>
-                                <td class="table_td">kisuca***@yahoo.com.tw</td>
-                                <td class="table_td">果汁機</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">洪○宜</td>
-                                <td class="table_td">shiny0***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">黃○蓉</td>
-                                <td class="table_td">pink218***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">王○傑</td>
-                                <td class="table_td">yiukhcftiug***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">劉○萍</td>
-                                <td class="table_td">jennifer571***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">莊○嘉</td>
-                                <td class="table_td">ldk***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">劉○潔</td>
-                                <td class="table_td">b0919087***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">顏○武</td>
-                                <td class="table_td">wyatt.***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○琳</td>
-                                <td class="table_td">azzz***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">盧○葶</td>
-                                <td class="table_td">s50***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○璇</td>
-                                <td class="table_td">sherry890***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">蔣○蓉</td>
-                                <td class="table_td">puppet***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○賓</td>
-                                <td class="table_td">jackypen2***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">周○娜</td>
-                                <td class="table_td">mingtengch***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">朱○明</td>
-                                <td class="table_td">qqma0***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○瑜</td>
-                                <td class="table_td">azuya0***@gmail.com</td>
-                                <td class="table_td table_td_3">必勝客現金禮券300元</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">許○華</td>
-                                <td class="table_td">3098888a***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">謝○旺</td>
-                                <td class="table_td">z0963117***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">劉○志</td>
-                                <td class="table_td">dsc008***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">楊○嘉</td>
-                                <td class="table_td">yangkuoc***@hotmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">賴○佑</td>
-                                <td class="table_td">a8370***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">吳○閱</td>
-                                <td class="table_td">dory525***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">林○婷</td>
-                                <td class="table_td">lht671***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">許○喬</td>
-                                <td class="table_td">eggby0***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">彭○麟</td>
-                                <td class="table_td">w532527***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">張○惠</td>
-                                <td class="table_td">lydiajh***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">馬○英</td>
-                                <td class="table_td">miroog***@hotmail.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○傑</td>
-                                <td class="table_td">simonchen***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">潘○樺</td>
-                                <td class="table_td">kkkniro***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">周○宇</td>
-                                <td class="table_td">chien_ming_w***@hotmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">江○芯</td>
-                                <td class="table_td">sonysorr***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">馬○蓮</td>
-                                <td class="table_td">malle0***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○子</td>
-                                <td class="table_td">apple2003***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">朱○鳳</td>
-                                <td class="table_td">ju19710***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">林○禾</td>
-                                <td class="table_td">java681***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">田○忠</td>
-                                <td class="table_td">garmaye***@yahoo.com.tw</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○騰</td>
-                                <td class="table_td">a0939682***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○華</td>
-                                <td class="table_td">cjh.***@gmail.com</td>
-                                <td class="table_td table_td_3">7-11 200元商品卡</td>
-                            </tr>
-                        <tbody>
-                    </table>
-                    <table border="1" class="table_2" data-aos="right-in">
-                        <thead class="thead_nd">
-                            <tr>
-                                <th colspan="2" class="thead_nd_title">備取名單</th>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%;">姓名</th>
-                                <th style="width: 50%;">電話</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table_tr">
-                                <td class="table_td_1">邱○微</td>
-                                <td class="table_td">0919-***-870</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○君</td>
-                                <td class="table_td">0938-***-630</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">鍾○文</td>
-                                <td class="table_td">0933-***-763</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">黃○貞</td>
-                                <td class="table_td">0958-***-329</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">邵○澍</td>
-                                <td class="table_td">	0929-***-195</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">莊○恩</td>
-                                <td class="table_td">	0960-***-572</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">張○銘</td>
-                                <td class="table_td">	0909-***-165</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">劉○泓</td>
-                                <td class="table_td">	0980-***-841</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">凃○譯</td>
-                                <td class="table_td">	0932-***-799</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">謝○雲</td>
-                                <td class="table_td">	0900-***-655</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">鍾○琴</td>
-                                <td class="table_td">	0972-***-126</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">宋○慶</td>
-                                <td class="table_td">	0938-***-651</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">蔡○</td>
-                                <td class="table_td">	0928-***-943</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">張○東</td>
-                                <td class="table_td">	0915-***-507</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">張林○櫻</td>
-                                <td class="table_td">0920-***-221</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">謝○毅</td>
-                                <td class="table_td">	0988-***-377</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">林○琴</td>
-                                <td class="table_td">	0932-***-753</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">范○誠</td>
-                                <td class="table_td">	0928-***-099</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">蘇○雪</td>
-                                <td class="table_td">	0928-***-970</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">王○豪</td>
-                                <td class="table_td">	0981-***-165</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">林羅○英</td>
-                                <td class="table_td">0911-***-800</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">李○恩</td>
-                                <td class="table_td">	0982-***-860</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">李○德</td>
-                                <td class="table_td">	0921-***-579</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">蔡○瑋</td>
-                                <td class="table_td">	0985-***-626</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">吳廖○就</td>
-                                <td class="table_td">0986-***-092</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">朱○丞</td>
-                                <td class="table_td">	0975-***-238</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">宋○玉</td>
-                                <td class="table_td">	0975-***-337</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">邱○德</td>
-                                <td class="table_td">	0911-***-657</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○偉</td>
-                                <td class="table_td">	0979-***-975</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">蔡○哲</td>
-                                <td class="table_td">	0926-***-928</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">李○慧</td>
-                                <td class="table_td">	0984-***-890</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">林○葳</td>
-                                <td class="table_td">	0976-***-846</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">郭○容</td>
-                                <td class="table_td">	0987-***-625</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">陳○婷</td>
-                                <td class="table_td">	0955-***-219</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">邱○萍</td>
-                                <td class="table_td">	0971-***-568</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">廖○娟</td>
-                                <td class="table_td">	0921-***-179</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">連○慧</td>
-                                <td class="table_td">	0975-***-897</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">施○岐</td>
-                                <td class="table_td">	0916-***-980</td>
-                            </tr>
-                            <tr class="table_tr">
-                                <td class="table_td_1">吳○瑩</td>
-                                <td class="table_td">0972-***-798</td>
-                            </tr>
-                        <tbody>
-                    </table>
+                <div class="footer_text">
+                    行政院農業委員會 動植物防檢疫局<br>版權所有©copyright 2023
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <div class="footer_copyright">Copyright ©</div>
-        <div class="footer_a">
-            <img src="./images/logo.png" alt="">
-        </div>
     </footer>
-    <script src="./js/lott_phone.js"></script>
 </body>
 
 </html>

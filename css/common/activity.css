@@ -217,6 +217,7 @@
     .act_popup_bg {
         width: 92vw;
         height: 117.33vw;
+        border: 5px solid #FFFFFF;
     }
 
     .act_title_all {
