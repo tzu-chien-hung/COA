@@ -37,6 +37,7 @@ main {
     z-index: 10;
     left: 240px;
     top: 8px;
+    display: none;
 }
 
 .count_num_all {
@@ -67,6 +68,7 @@ main {
     z-index: 10;
     left: 468px;
     top: 19px;
+    display: none;
 }
 
 .score_num {
@@ -126,6 +128,16 @@ main {
     }
 }
 
+.fade_in_round2 {
+    animation-name: fadein;
+    animation-duration: .8s;
+}
+
+.fade_out_round2 {
+    animation-name: fadeout;
+    animation-duration: .8s;
+}
+
 /* =============== 開始頁面 =============== */
 #game_start {
     background-image: url(../images/game_start.png);
@@ -134,7 +146,7 @@ main {
     background-size: cover;
     width: 100%;
     height: 100%;
-    display: none;
+    /* display: none; */
 }
 
 @keyframes blink {
@@ -240,10 +252,15 @@ main {
     top: 185px;
     right: 14px;
     animation: 1s blink ease-out;
+    display: none;
 }
 
 .game_round_dialogbox_all {
     padding-top: 10px;
+}
+
+#round01_dialogbox {
+    display: flex;
 }
 
 .game_round_title {
@@ -441,7 +458,7 @@ span {
     width: 100%;
     height: 100%;
     cursor: url(../images/sight.png)10 5, auto;
-    /* display: none; */
+    display: none;
 }
 
 #left_ip_2 {
@@ -502,6 +519,7 @@ span {
     right: 80px;
     cursor: pointer;
     transition: all 0.1s ease-out;
+    display: none;
 }
 
 .next_box:hover {
@@ -509,8 +527,18 @@ span {
     background-image: url(../images/next_box_hover.png);
 }
 
-#round02_dialogbox {
+.next_box_last {
+    background-image: url(../images/finish_btn.png);
     display: none;
+}
+
+.next_box_last:hover {
+    background-image: url(../images/finish_btn_hover.png);
+}
+
+#round02_dialogbox {
+    /* display: none; */
+    z-index: 5;
 }
 
 #round2_q1 {
@@ -519,7 +547,7 @@ span {
     left: 295px;
     width: 353.59px;
     height: 338.73px;
-    display: none;
+    /* display: none; */
 }
 
 #round2_q1_box {
@@ -566,8 +594,7 @@ span {
     left: 210px;
     width: 434px;
     height: 265px;
-    border: 1px solid;
-    /* display: none; */
+    display: none;
 }
 
 #round2_q2_box {
@@ -578,7 +605,7 @@ span {
 
 #round2_q2_coffee {
     position: absolute;
-    top: -2px;
+    top: 0px;
     left: 160px;
     width: 142px;
     z-index: 1;
@@ -586,7 +613,7 @@ span {
 
 #round2_q2_sausage {
     position: absolute;
-    top: 23px;
+    top: 25px;
     left: 79px;
     width: 109px;
     z-index: 2;
@@ -655,22 +682,344 @@ span {
     z-index: 4;
 }
 
+#add_03 {
+    right: 10%;
+    top: 31%;
+}
+
+@keyframes fadein_out {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#error_popup {
+    background-image: url(../images/dialogbox_wrong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 205px;
+    height: 117px;
+    position: absolute;
+    top: 200px;
+    left: 73px;
+    z-index: 10;
+    display: none;
+    opacity: 0;
+    animation: 1.2s fadein_out ease-in;
+}
+
 /* =============== 第二關頁面 =============== */
+/* =============== 第三關頁面開始 =============== */
+#game_round3 {
+    background-image: url(../images/game_\ third.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    cursor: url(../images/sight.png)10 5, auto;
+    display: none;
+}
+
+#left_ip_3 {
+    width: 347px;
+    position: absolute;
+    bottom: -22px;
+    left: 10px;
+}
+
+.game_round3_txt {
+    width: 460px;
+}
+
+#round03_dialogbox {
+    z-index: 5;
+}
+
+.round3_qa {
+    width: 450px;
+    height: 212px;
+    position: absolute;
+    top: 34%;
+    left: 27%;
+}
+
+.round3_qa_content {
+    display: flex;
+    width: 450px;
+}
+
+#round3_q2 {
+    display: none;
+}
+
+.round3_ques_img {
+    width: 68px;
+    margin-right: 15px;
+}
+
+.round3_ques_txt {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 41px;
+    color: #48362D;
+    margin: 5px 0 30px;
+}
+
+.round3_ans_txt_all {
+    display: flex;
+}
+
+.round3_ans_option {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 41px;
+    color: #E16B69;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.round3_ans_option:hover {
+    color: #48362D;
+}
+
+.round3_ans_option:first-child {
+    margin-right: 30px;
+}
+
+@keyframes fade_up {
+    0% {
+        top: 35%;
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 25%;
+        opacity: 1;
+    }
+}
+
+#round3_error_popup {
+    width: 430px;
+    height: 400px;
+    background: #F6DD5C;
+    border: 7px solid #FFFFFF;
+    border-radius: 15px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: 0.5s fade_up ease-in;
+    display: none;
+}
+
+#round3_error_a_img {
+    margin: 25px auto 0;
+    width: 68px;
+}
+
+#round3_correct {
+    width: 365px;
+    height: 200px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin: 10px auto 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#round3_correct_txt {
+    width: 320px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 41px;
+    color: #48362D;
+}
+
+.confirm_btn {
+    width: 180px;
+    height: 42px;
+    background: #A4AED2;
+    border-radius: 50px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+}
+/* =============== 第三關頁面結束 =============== */
 /* =============== 表單頁面 =============== */
+#game_end {
+    background-image: url(../images/form.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    cursor: url(../images/sight.png)10 5, auto;
+    display: none;
+}
 
 #game_form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#game_form_ip {
+    position: absolute;
+    bottom: -3.4%;
+    left: 6%;
+    width: 344px;
+}
+
+#game_form_content {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 6.5%;
+}
+
+#game_form_title {
+    background-image: url(../images/dialogbox_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 235.5px;
+    height: 206.5px;
+    margin: 24px 39.5px 0 0;
+}
+
+.form_row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.game_label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #48362D;
+    margin: 0 5px 0 19px;
+}
+
+.game_input {
+    border: 0 solid #B7B8B8;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    /* padding-left: 5px; */
+}
+
+::placeholder {
+    color: #C8C9CA;
+    opacity: 1;
+    /* Firefox */
+}
+
+.exclamation_word {
+    position: absolute;
+    top: 105%;
+    left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E16B69;
     display: none;
 }
 
-#gameFormDone {
+.form_btn {
+    background-image: url(../images/next_box.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 220px;
+    height: 61px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+.form_submit_btn {
+    background-image: url(../images/send_btn.png);
+    margin: 40px auto 20px;
+}
+
+.form_submit_btn:hover {
+    background-image: url(../images/send_btn_hover.png);
+}
+
+.form_repeat_btn {
+    margin: 0 auto;
+    background-image: url(../images/again_btn.png);
+}
+
+.form_repeat_btn:hover {
+    background-image: url(../images/again_btn_hover.png);
+}
+
+
+@keyframes fade_up_2 {
+    0% {
+        top: 50%;
+        opacity: 0.2;
+    }
+
+    100% {
+        top: 38%;
+        opacity: 1;
+    }
+}
+.game_completed {
+    width: 444px;
+    height: 217px;
+    background: #F6DD5C;
+    border: 7px solid #FFFFFF;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 0.5s fade_up_2 ease-in;
     display: none;
+}
+
+.game_completed_text {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 41px;
+    color: #48362D;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* =============== 表單頁面 =============== */
-@media (max-width: 1600px) {}
-
-@media (max-width: 1439.98px) {}
-
 @media (max-width: 767.98px) {
     main {
         background-image: url(../images/bg_mb.png);
@@ -708,6 +1057,28 @@ span {
         height: 51.9px;
         left: 369px;
         top: 16px;
+    }
+
+    #game_start_dialogbox {
+        width: 300.118px;
+        height: 165.312px;
+        right: 19px;
+        bottom: 44px;
+    }
+
+    #game_start_txt {
+        right: 14px;
+        bottom: 19px;
+        width: 270px;
+        font-size: 18.638px;
+        line-height: 26.021px;
+    }
+
+    #startbtn {
+        right: 17px;
+        top: 305px;
+        width: 200.5px;
+        height: 62.91px;
     }
 
     /* 第一關 */
@@ -924,7 +1295,181 @@ span {
         width: 136.06px;
     }
 
-    /* 第二關結束 */
+    #round2_q3 {
+        top: 142px;
+        left: 191px;
+        width: 307px;
+        height: 221px;
+    }
+
+    #round2_q3_box {
+        width: 218.95px;
+    }
+
+    #round2_q3_vegetable {
+        top: 72px;
+        left: 6px;
+        width: 110.6px;
+    }
+
+    #round2_q3_peanut {
+        top: -7px;
+        left: 35px;
+        width: 75px;
+    }
+
+    #round2_q3_detergent {
+        bottom: 5px;
+        left: 213px;
+        width: 95px;
+    }
+
+    #round2_q3_plant {
+        bottom: 15px;
+        left: 155px;
+        width: 76px;
+    }
+
+    #error_popup {
+        width: 176.027px;
+        height: 101.024px;
+        top: 151px;
+        left: 67px;
+    }
+
+    /* =============== 第二關結束 ===============*/
+    /* =============== 第三關開始 =============== */
+    #left_ip_3 {
+        width: 272.841px;
+        bottom: -18px;
+        left: 20px;
+    }
+
+    .game_round3_txt {
+        width: 460px;
+    }
+
+    #round03_dialogbox {
+        z-index: 5;
+    }
+
+    .round3_qa {
+        width: 404px;
+        height: 176.027px;
+        top: 34%;
+        left: 24%;
+    }
+
+    .round3_qa_content {
+        width: 401px;
+    }
+
+    .round3_ques_img {
+        width: 68px;
+        margin-right: 15px;
+    }
+
+    .round3_ques_txt {
+        font-size: 24px;
+        line-height: 35px;
+        margin: 2px 0 16px;
+    }
+
+    .round3_ans_option {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 14px;
+    }
+
+    .round3_ans_option:first-child {
+        margin-right: 14px;
+    }
+
+    #round3_error_popup {
+        width: 368.9px;
+        height: 342.86px;
+        border: 6.7px solid #FFFFFF;
+        border-radius: 14.5px;
+    }
+
+    #round3_error_a_img {
+        margin: 26.65px auto 0;
+        width: 58px;
+    }
+
+    #round3_correct {
+        width: 313.78px;
+        height: 160px;
+        border-radius: 14.5px;
+        margin: 9px auto 15px;
+    }
+
+    #round3_correct_txt {
+        width: 280px;
+        font-size: 24.5px;
+        line-height: 35.2px;
+    }
+
+    .confirm_btn {
+        width: 143.88px;
+        height: 33.675px;
+        font-size: 24px;
+        line-height: 33.675px;
+    }
+
+    /* =============== 第三關結束 =============== */
+    /* =============== 表單頁面開始 =============== */
+    #game_form_title {
+        width: 185.18px;
+        height: 162.37px;
+        margin: 20px 31.05px 0 0;
+    }
+
+    #game_form_ip {
+        width: 262.92px;
+    }
+
+    .form_row {
+        width: 275.52px;
+        height: 45.92px;
+    }
+
+    .game_label {
+        margin: 0 0px 0 14px;
+    }
+
+    .game_input {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .exclamation_word {
+        top: 102%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .form_btn {
+        width: 170px;
+        height: 47px;
+    }
+
+    .form_submit_btn {
+        margin: 39px auto 10px;
+    }
+    .game_completed {
+        width: 368.89px;
+        height: 154.6px;
+        border: 6.7px solid #FFFFFF;
+        border-radius: 14.5px;
+    }
+    
+    .game_completed_text {
+        font-size: 24.5px;
+        line-height: 35.2px;
+        margin-bottom: 30.61px;
+    }
+    /* =============== 表單頁面結束 =============== */
 }
 
 @media (max-width: 575.98px) {
@@ -963,6 +1508,28 @@ span {
         top: 2.603vw;
     }
 
+    #game_start_dialogbox {
+        width: 52.285vw;
+        height: 28.8vw;
+        right: 3vw;
+        bottom: 6vw;
+    }
+
+    #game_start_txt {
+        right: 2.1vw;
+        bottom: 3.8vw;
+        width: 47.5vw;
+        font-size: 3.2vw;
+        line-height: 4.533vw;
+    }
+
+    #startbtn {
+        right: 3vw;
+        top: 53vw;
+        width: 34.931vw;
+        height: 10.96vw;
+    }
+
     /* 第一關開始 */
     #game1_start,
     #game1_end,
@@ -985,12 +1552,12 @@ span {
     }
 
     .game_round_title {
-        font-size: 3.733vw;
-        line-height: 5.333vw;
+        font-size: 3.6vw;
+        line-height: 5.6vw;
     }
 
     .game_round_txt {
-        margin: 1.333vw auto;
+        margin: 1.2vw auto;
         width: 61.6vw;
         font-size: 3.2vw;
         line-height: 4.533vw;
@@ -1162,13 +1729,13 @@ span {
     }
 
     #round2_q2_coffee {
-        top: -0.6vw;
+        top: -0.2vw;
         left: 22vw;
         width: 19.373vw;
     }
 
     #round2_q2_sausage {
-        top: 2.94vw;
+        top: 3.1vw;
         left: 11vw;
         width: 14.872vw;
     }
@@ -1182,5 +1749,186 @@ span {
         width: 21.867vw;
         bottom: -2vw;
     }
-    /* 第二關結束 */
+
+    #round2_q3 {
+        top: 25.6vw;
+        left: 33.275vw;
+        width: 53.484vw;
+        height: 38.502vw
+    }
+
+    #round2_q3_box {
+        width: 38.145vw;
+    }
+
+    #round2_q3_vegetable {
+        top: 11.544vw;
+        left: 1.045vw;
+        width: 19.268vw;
+    }
+
+    #round2_q3_peanut {
+        top: -1.22vw;
+        left: 5.098vw;
+        width: 13.5vw;
+    }
+
+    #round2_q3_detergent {
+        bottom: 0.87vw;
+        left: 37.108vw;
+        width: 16.551vw;
+    }
+
+    #round2_q3_plant {
+        bottom: 2.613vw;
+        left: 27.003vw;
+        width: 13.24vw;
+    }
+
+    #error_popup {
+        width: 30vw;
+        height: 17.027vw;
+        top: 27vw;
+        left: 11vw;
+    }
+
+    /* =============== 第二關結束 ===============*/
+    /* =============== 第三關開始 =============== */
+    #left_ip_3 {
+        width: 47.533vw;
+        bottom: -4vw;
+        left: 3.8vw;
+    }
+
+    .game_round3_txt {
+        width: 460px;
+    }
+
+    #round03_dialogbox {
+        z-index: 5;
+    }
+
+    .round3_qa {
+        width: 70vw;
+        height: 30.667vw;
+        top: 33%;
+        left: 25%;
+    }
+
+    .round3_qa_content {
+        width: 70vw;
+    }
+
+    .round3_ques_img {
+        width: 40px;
+        margin-right: 7.62px;
+    }
+
+    .round3_ques_txt {
+        font-size: 4.26vw;
+        line-height: 6.13vw;
+        margin: 2px 0 2.87vw;
+    }
+
+    .round3_ans_option {
+        font-size: 4.26vw;
+        line-height: 6.13vw;
+        margin-bottom: 2.47vw;
+    }
+
+    .round3_ans_option:first-child {
+        margin-right: 2.47vw;
+    }
+
+    #round3_error_popup {
+        width: 64.267vw;
+        height: 59.73vw;
+        border: 1.18vw solid #FFFFFF;
+        border-radius: 2.5vw;
+    }
+
+    #round3_error_a_img {
+        margin: 4.64vw auto 0;
+        width: 10.13vw;
+    }
+
+    #round3_correct {
+        width: 54.667vw;
+        height: 29.33vw;
+        border-radius: 2.5vw;
+        margin: 1vw auto 2.5vw;
+    }
+
+    #round3_correct_txt {
+        width: 49.5vw;
+        font-size: 4.27vw;
+        line-height: 6.133vw;
+    }
+
+    .confirm_btn {
+        width: 25.07vw;
+        height: 5.87vw;
+        font-size: 4.267vw;
+        line-height: 5.87vw;
+    }
+
+    /* =============== 第三關結束 =============== */
+    /* =============== 表單開始 =============== */
+    #game_form_title {
+        width: 32.26vw;
+        height: 28.288vw;
+        margin: 4.89vw 5.41vw 0 0;
+    }
+
+    #game_form_ip {
+        bottom: -3.9%;
+        width: 45.81vw;
+    }
+
+    .form_row {
+        width: 48vw;
+        height: 8vw;
+        margin-bottom: 5.333vw;
+    }
+
+    .game_label {
+        font-size: 3.2vw;
+        line-height: 4.53vw;
+        margin: 0 0px 0 2.565vw;
+    }
+
+    .game_input {
+        font-size: 3.2vw;
+        line-height: 4.53vw;
+        width: 30vw;
+    }
+
+    .exclamation_word {
+        top: 102%;
+        left: 2vw;
+        font-size: 3.2vw;
+        line-height: 4.53vw;
+    }
+
+    .form_btn {
+        width: 28.8vw;
+        height: 7.2vw;
+    }
+
+    .form_submit_btn {
+        margin: 6.89vw auto 2.66vw;
+    }
+    .game_completed {
+        width: 64.267vw;;
+        height: 26.93vw;
+        border: 1.18vw solid #FFFFFF;
+        border-radius: 2.53vw;
+    }
+    
+    .game_completed_text {
+        font-size: 4.27vw;
+        line-height: 6.13vw;
+        margin-bottom: 5.333vw;
+    }
+    /* =============== 表單結束 =============== */
 }

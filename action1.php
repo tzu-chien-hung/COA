@@ -13,20 +13,26 @@ if(function_exists('date_default_timezone_set')) {
 }
 
 $name = trim($_GET['name']);
-$addr = trim($_GET['addr']);
+$email = trim($_GET['email']);
 $tel = trim($_GET['tel']);
 $status = "S";
+$n = (int)$_GET['n'];  // 計算次數
 
 $empty = false;
 $result['success'] = false;
 
+if(!$n || $n < 1) {
+	$n = 1;
+} else {
+	$n++;
+}
 if(!$name) {
 	$empty = true;
 	$result['msg'][] = "姓名不可為空。\n";
 }
-if(!$addr) {
+if(!$email) {
 	$empty = true;
-	$result['msg'][] = "郵遞區號及地址不可為空\n";
+	$result['msg'][] = "電子郵件信箱不可為空\n";
 }
 if(!$tel) {
 	$empty = true;
@@ -38,10 +44,10 @@ if($empty !== true) {
 	if($mysqli->connect_error) {
 		$result['msg'] = "資料庫連結失敗，錯誤訊息：" . $mysqli->connect_error;
 	} else {
-        $event_name = "MOTC2022event";
-		$sql = "insert into sf_events (event_name, full_name_zh, mobile, residential_address) values (?, ?, ?, ?)";
+        $event_name = "baphiq2023event";
+		$sql = "insert into sf_events (event_name, full_name_zh, email, mobile) values (?, ?, ?, ?)";
 		if($stmt = $mysqli->prepare($sql)) {
-			$stmt->bind_param("ssss", $event_name, $name, $tel, $addr);
+			$stmt->bind_param("ssss", $event_name, $name, $email, $tel);
 			$stmt->execute();
 			if($stmt->affected_rows) {
 				$id = $mysqli->insert_id;

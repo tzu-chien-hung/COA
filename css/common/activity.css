@@ -2,8 +2,8 @@
     height: 723px;
     width: 985px;
     border-radius: 20px;
-    background: #FFFFFF;
-    border: 4.50954px solid #F4B220;
+    background: #F3E6DD;
+    border: 10px solid #FFFFFF;
     box-shadow: 4.50954px 4.50954px 7.21526px rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 100;
@@ -24,10 +24,16 @@
 }
 
 .act_title_all {
+    background-image: url(../../images/activity.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    width: 462px;
+    height: 140px;
+    margin: 50px auto 20px;
 }
 
 .act_content_all {
