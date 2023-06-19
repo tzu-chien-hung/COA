@@ -7,6 +7,7 @@
 #body {
     display: none;
 }
+
 main {
     background-image: url(../images/bg.png);
     background-position: center;
@@ -471,7 +472,7 @@ span {
 #left_ip_2 {
     width: 329.5px;
     position: absolute;
-    bottom: -33px;
+    bottom: -36px;
     left: 10px;
 }
 
@@ -605,6 +606,14 @@ span {
     left: 205px;
     width: 121px;
     z-index: 4;
+}
+
+#round2_q1_wood {
+    position: absolute;
+    top: 227px;
+    left: -88px;
+    width: 126px;
+    z-index: 5;
 }
 
 #round2_q2 {
@@ -1100,6 +1109,7 @@ span {
     justify-content: center;
     align-items: center;
 }
+
 .game_times_up {
     display: flex;
     justify-content: center;
@@ -1113,6 +1123,7 @@ span {
 #gameTimesUp {
     display: none;
 }
+
 @media (max-width: 767.98px) {
     main {
         background-image: url(../images/bg_mb.png);
@@ -1292,7 +1303,7 @@ span {
 
     #round2_q1 {
         top: 116px;
-        left: 206px;
+        left: 232px;
         width: 277.05px;
         height: 260.98px;
         /* display: none; */
@@ -1325,7 +1336,11 @@ span {
         top: 145px;
         left: 164px;
     }
-
+    #round2_q1_wood {
+        width: 99px;
+        top: 171px;
+        left: -63px;
+    }
     .next_box {
         width: 159px;
         height: 45px;
@@ -1543,7 +1558,8 @@ span {
         line-height: 20px;
     }
 
-    .form_repeat_btn,.form_submit_btn  {
+    .form_repeat_btn,
+    .form_submit_btn {
         width: 170px;
         height: 47px;
     }
@@ -1580,9 +1596,16 @@ span {
     }
 
     /* =============== 未滿35分結束 =============== */
+
+    .game_times_up_text {
+        margin: 0;
+    }
 }
 
 @media (max-width: 575.98px) {
+    main {
+        min-height: auto;
+    }
     .main_container {
         width: 100vw;
         height: 100vw;
@@ -1759,7 +1782,7 @@ span {
 
     #round2_q1 {
         top: 21.06vw;
-        left: 34.93vw;
+        left: 40.93vw;
         width: 48.267vw;
         height: 45.333vw;
         /* display: none; */
@@ -1791,6 +1814,11 @@ span {
         width: 16vw;
         top: 24.5vw;
         left: 29vw;
+    }
+    #round2_q1_wood {
+        width: 15.5vw;
+        top: 30.5vw;
+        left: -9vw;
     }
 
     .next_box {
@@ -2017,7 +2045,8 @@ span {
         line-height: 4.53vw;
     }
 
-    .form_repeat_btn,.form_submit_btn {
+    .form_repeat_btn,
+    .form_submit_btn {
         width: 28.8vw;
         height: 7.2vw;
     }
@@ -2052,4 +2081,7 @@ span {
     }
 
     /* =============== 未滿35分結束 =============== */
+    .game_times_up_text {
+        margin: 0;
+    }
 }
