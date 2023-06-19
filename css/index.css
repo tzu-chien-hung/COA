@@ -548,7 +548,7 @@ span {
     left: 295px;
     width: 353.59px;
     height: 338.73px;
-    /* display: none; */
+    display: none;
 }
 
 #round2_q1_box {
@@ -756,15 +756,12 @@ span {
     position: absolute;
     top: 34%;
     left: 27%;
+    display: none;
 }
 
 .round3_qa_content {
     display: flex;
     width: 450px;
-}
-
-#round3_q2 {
-    display: none;
 }
 
 .round3_ques_img {
@@ -845,6 +842,7 @@ span {
 }
 
 #round3_correct_txt {
+    text-align: justify;
     width: 320px;
     font-weight: 900;
     font-size: 28px;
