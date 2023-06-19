@@ -395,6 +395,7 @@
                 gameTimesUp.classList.add("fade_out");
                 setTimeout(() => {
                     gameTimesUp.style.display = "none";
+                    gameTimesUp.classList.remove("fade_out");
                 }, 800);
             }, 1200);
         }
@@ -414,10 +415,12 @@
                     if (timerCount === 5 && !gameRound1Pack1Success) {
                         clearInterval(timerRound1Pack1);
                         TimesUp();
-                        // console.log("五秒到了");
-                        setTimeout(()=> {
+                        console.log("五秒到了");
+                        setTimeout(() => {
                             gameRound1Pack1();
-                        },800)
+                            console.log("執行第一題結束");
+                        }, 800);
+
                     }
                 }, 1000);
             }, 6170);
@@ -447,13 +450,10 @@
                             countNum.innerText = timerCount;
                             if (timerCount === 0) {
                                 TimesUp();
-                                // gameTimesUp.style.display = "flex";
                                 setTimeout(() => {
                                     game_round1.classList.add("fade_out");
-                                    // gameTimesUp.classList.add("fade_out");
                                     setTimeout(() => {
                                         game_round1.style.display = "none";
-                                        // gameTimesUp.style.display = "none";
                                         document.getElementById("game_round2").style.display = "block";
                                         document.getElementById("round02_dialogbox").style.display = "flex";
                                         timerCount = 30;
@@ -584,9 +584,11 @@
             timerCount -= 1;
             timerRound2Box -= 1;
             if (timerCount === 20 && round2State === 1) {
+                TimesUp();
                 document.getElementById(`next_box_01`).click();
 
             } else if (timerCount === 10 && round2State === 2) {
+                TimesUp();
                 document.getElementById(`next_box_02`).click();
             }
             // if (timerRound2Box === 0) {
@@ -597,6 +599,7 @@
             //     }
             // }
             if (timerCount === 0) {
+                TimesUp();
                 document.getElementById(`next_box_03`).click();
                 clearInterval(timerRound2);
             }
@@ -677,15 +680,29 @@
         }
         document.getElementById('next_box_03').addEventListener('click', () => {
             // 開始第三關
-            document.getElementById('game_round2').classList.add('fade_out');
             setTimeout(() => {
-                document.getElementById('game_round2').style.display = 'none';
-                document.getElementById('game_round3').style.display = 'block';
-                document.getElementById('round03_dialogbox').style.display = 'flex';
-                clearInterval(timerRound2)
-                timerCount = 15;
-                countNum.innerText = timerCount;
-            }, 800);
+                document.getElementById('game_round2').classList.add('fade_out');
+                setTimeout(() => {
+                    document.getElementById('game_round2').style.display = 'none';
+                    document.getElementById('game_round3').style.display = 'block';
+                    document.getElementById('round03_dialogbox').style.display = 'flex';
+                    clearInterval(timerRound2)
+                    timerCount = 15;
+                    countNum.innerText = timerCount;
+                }, 800);
+            }, 1200);
+
+            setTimeout(() => {
+                game_round1.classList.add("fade_out");
+                setTimeout(() => {
+                    game_round1.style.display = "none";
+                    document.getElementById("game_round2").style.display = "block";
+                    document.getElementById("round02_dialogbox").style.display = "flex";
+                    timerCount = 30;
+                    countNum.innerText = 30;
+                }, 800);
+            }, 1200);
+
         });
 
         document.getElementById('round03_start_btn').addEventListener('click', () => {
