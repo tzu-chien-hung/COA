@@ -709,12 +709,26 @@
         //         console.log('執行遊戲成功')
         //     }
         // }
-        let form_repeat_btn = document.querySelectorAll('.form_repeat_btn')[0];
-        form_repeat_btn.addEventListener('click', () => {
-            window.location.reload();
-        })
-        form_repeat_btn.addEventListener('click', () => {
-            window.location.reload();
+        let form_repeat_btn = document.querySelectorAll('.form_repeat_btn');
+        // console.log(form_repeat_btn);
+        // form_repeat_btn.addEventListener('click', () => {
+        //     window.location.reload();
+        // })
+        // form_repeat_btn.addEventListener('click', () => {
+        //     window.location.reload();
+        // })
+
+        // document.getElementById('gameFormRepeat').addEventListener('click', () => {
+        //     window.location.reload();
+        // });
+        // document.getElementById('gameFormRepeat2').addEventListener('click', () => {
+        //     window.location.reload();
+        // });
+
+        form_repeat_btn.forEach((item) => {
+            item.addEventListener('click', () => {
+                window.location.reload();
+            })
         })
     </script>
     <!-- =================  串接資料庫 ================= -->
