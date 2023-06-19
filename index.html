@@ -315,7 +315,7 @@
             <div class="game_times_up_bg" id="gameTimesUp">
                 <div class="game_completed game_times_up">
                     <div class="game_completed_block">
-                        <div class="game_completed_text game_times_up_text">時間到囉！</div>
+                        <div class="game_completed_text game_times_up_text">時間到！</div>
                     </div>
                 </div>
             </div>
@@ -413,8 +413,11 @@
                     countNum.innerText = timerCount;
                     if (timerCount === 5 && !gameRound1Pack1Success) {
                         clearInterval(timerRound1Pack1);
+                        TimesUp();
                         // console.log("五秒到了");
-                        gameRound1Pack1();
+                        setTimeout(()=> {
+                            gameRound1Pack1();
+                        },800)
                     }
                 }, 1000);
             }, 6170);
@@ -443,13 +446,14 @@
                             timerCount -= 1;
                             countNum.innerText = timerCount;
                             if (timerCount === 0) {
-                                gameTimesUp.style.display = "flex";
+                                TimesUp();
+                                // gameTimesUp.style.display = "flex";
                                 setTimeout(() => {
                                     game_round1.classList.add("fade_out");
-                                    gameTimesUp.classList.add("fade_out");
+                                    // gameTimesUp.classList.add("fade_out");
                                     setTimeout(() => {
                                         game_round1.style.display = "none";
-                                        gameTimesUp.style.display = "none";
+                                        // gameTimesUp.style.display = "none";
                                         document.getElementById("game_round2").style.display = "block";
                                         document.getElementById("round02_dialogbox").style.display = "flex";
                                         timerCount = 30;
