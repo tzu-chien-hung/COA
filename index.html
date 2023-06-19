@@ -18,15 +18,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+TC:wght@500;700;900&display=swap"
         rel="stylesheet">
     <link rel="preload" as="image" href="./images/bg.png">
+    <link rel="preload" as="image" href="./images/dialogbox_1.png">
     <link rel="preload" as="image" href="./images/game_start.png">
     <link rel="preload" as="image" href="./images/startbtn.png">
-    <link rel="preload" as="image" href="./images/game_first.png">
+    <link rel="preload" as="image" href="./images/startbtn_hover.png">
+    <!-- <link rel="preload" as="image" href="./images/game_first.png">
     <link rel="preload" as="image" href="./images/game_second.png">
     <link rel="preload" as="image" href="./images/game_third.png">
-    <link rel="preload" as="image" href="./images/form.png">
+    <link rel="preload" as="image" href="./images/form.png"> -->
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementById('body').style.display = 'block'
+        });
+    </script>
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="header_logo">
             <a class="header_a" href="./index.html">
@@ -227,7 +234,7 @@
                     <div class="game_round_dialogbox_all">
                         <div class="game_round_title">檢疫官出題考考你！</div>
                         <div class="game_round_txt game_round3_txt">
-                            問答題請選出正確答案，離成為抓漏專家不遠了！<span>答對一題加5分！</span>
+                            問答題請選出正確答案，離成為抓漏專家不遠了！<span>答對一題加10分！</span>
                         </div>
                         <div class="game_round_start_btn" id="round03_start_btn">開始遊戲</div>
                     </div>
@@ -305,6 +312,13 @@
                     <div class="confirm_btn" id="game_completed_btn">確定</div>
                 </div>
             </div>
+            <div class="game_times_up_bg" id="gameTimesUp">
+                <div class="game_completed game_times_up">
+                    <div class="game_completed_block">
+                        <div class="game_completed_text game_times_up_text">時間到囉！</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -359,64 +373,89 @@
         const scoreNum = document.getElementById('score_num');
         const countNum = document.getElementById("count_num");
         let gameRound1Pack1Success = false;
-        let timerRound1Pack1, timerRound1Pack2
+        let timerRound1Pack1, timerRound1Pack2;
+        let game_round1 = document.getElementById('game_round1');
+        let game_1_start = document.getElementById("game1_start");
+        let pack_all = document.getElementById("pack_all");
+        let pack_all_02 = document.getElementById("pack_all_02");
+        let dog02 = document.getElementById("dog02");
+        let game_1_end = document.getElementById("game1_end");
+        let gameTimesUp = document.getElementById("gameTimesUp");
+
         document.getElementById("startbtn").addEventListener("click", () => {
             document.getElementById("game_start").style.display = "none";
             document.getElementById("score").style.display = "block";
             document.getElementById("count").style.display = "block";
-            document.getElementById("game_round1").style.display = "block";
+            game_round1.style.display = "block";
         });
 
+        function TimesUp() {
+            gameTimesUp.style.display = "flex";
+            setTimeout(() => {
+                gameTimesUp.classList.add("fade_out");
+                setTimeout(() => {
+                    gameTimesUp.style.display = "none";
+                }, 800);
+            }, 1200);
+        }
         document.getElementById("round01_start_btn").addEventListener("click", () => {
-            document.getElementById("game1_start").style.display = "block";
+            game_1_start.style.display = "block";
             document.getElementById("round01_dialogbox").style.display = "none";
             document.getElementById("dog01").style.display = "none";
-
             game1Start.play();
             setTimeout(() => {
                 game1Start.stop();
-                document.getElementById("pack_all").style.display =
-                    "flex";
-                document.getElementById("game1_start").style.display =
-                    "none";
-                document.getElementById("dog02").style.display =
-                    "block";
+                pack_all.style.display = "flex";
+                game_1_start.style.display = "none";
+                dog02.style.display = "block";
                 timerRound1Pack1 = setInterval(() => {
                     timerCount -= 1;
                     countNum.innerText = timerCount;
                     if (timerCount === 5 && !gameRound1Pack1Success) {
                         clearInterval(timerRound1Pack1);
-                        console.log("五秒到了");
+                        // console.log("五秒到了");
                         gameRound1Pack1();
                     }
                 }, 1000);
             }, 6170);
         });
         function gameRound1Pack1() {
-            document.getElementById("game1_end").style.display = "block";
-            document.getElementById("dog02").style.display = "none";
+            game_1_end.style.display = "block";
+            dog02.style.display = "none";
             gameRound1Pack1Success = true
             setTimeout(() => {
-                document.getElementById("pack_all").style.display = "none";
+                pack_all.style.display = "none";
                 // document.getElementById("success01").style.display = "none";
                 // document.getElementById("mistake_left01").style.display ="none";
                 // document.getElementById("mistake_right01").style.display ="none";
                 game1End.play();
                 setTimeout(() => {
                     game1End.stop();
-                    document.getElementById("game1_end").style.display = "none";
+                    game_1_end.style.display = "none";
                     document.getElementById("game2_start").style.display = "block";
                     game2Start.play();
                     setTimeout(() => {
                         game2Start.stop();
-                        document.getElementById("pack_all_02").style.display = "flex";
+                        pack_all_02.style.display = "flex";
                         document.getElementById("dog03").style.display = "block";
                         document.getElementById("game2_start").style.display = "none";
                         timerRound1Pack2 = setInterval(() => {
                             timerCount -= 1;
                             countNum.innerText = timerCount;
                             if (timerCount === 0) {
-                                gameRound1Pack2();
+                                gameTimesUp.style.display = "flex";
+                                setTimeout(() => {
+                                    game_round1.classList.add("fade_out");
+                                    gameTimesUp.classList.add("fade_out");
+                                    setTimeout(() => {
+                                        game_round1.style.display = "none";
+                                        gameTimesUp.style.display = "none";
+                                        document.getElementById("game_round2").style.display = "block";
+                                        document.getElementById("round02_dialogbox").style.display = "flex";
+                                        timerCount = 30;
+                                        countNum.innerText = 30;
+                                    }, 800);
+                                }, 1200);
                                 clearInterval(timerRound1Pack2);
                             }
                         }, 1000);
@@ -426,16 +465,13 @@
         }
         function gameRound1Pack2() {
             document.getElementById("dog03").style.display = "none";
-            document.getElementById("game2_end").style.display =
-                "block";
             document.getElementById("game2_start").style.display =
                 "none";
             setTimeout(() => {
-                document.getElementById("add_02").style.display =
-                    "none";
+                document.getElementById("add_02").style.display = "none";
             }, 1000);
             setTimeout(() => {
-                document.getElementById("pack_all_02").style.display = "none";
+                pack_all_02.style.display = "none";
                 // document.getElementById("success02").style.display ="none";
                 // document.getElementById("mistake_left02").style.display = "none";
                 // document.getElementById("mistake_right02").style.display = "none";
@@ -443,9 +479,9 @@
             }, 1500);
             setTimeout(() => {
                 // game2End.stop();
-                document.getElementById("game_round1").classList.add("fade_out");
+                game_round1.classList.add("fade_out");
                 setTimeout(() => {
-                    document.getElementById("game_round1").style.display = "none";
+                    game_round1.style.display = "none";
                     document.getElementById("game_round2").style.display = "block";
                     document.getElementById("round02_dialogbox").style.display = "flex";
                     timerCount = 30;
@@ -514,6 +550,7 @@
                 document.getElementById("add_02").style.display = "none";
                 // console.log('1')
             }, 1000);
+            document.getElementById("game2_end").style.display = "block";
             gameRound1Pack2();
         });
         // 第二關開始
@@ -561,10 +598,30 @@
             }
             countNum.innerText = timerCount;
         }
+        function GID(id) {
+            return document.getElementById(id);
+        }
+        let round2Box1Count = 0;
+        let round2Box2Count = 0;
+        let round2Box3Count = 0;
+        // const answerArray = [[GID('round2_q1_dogfood')],[GID('round2_q2_sausage'),GID('round2_q2_egg')],[GID('round2_q3_vegetable'),GID('round2_q3_peanut'),GID('round2_q3_peanut')]]
         function round2AnswerRight(item) {
             addScore(5)
             item.style.display = 'none';
-
+            if (round2State === 1) {
+                round2Box1Count += 1
+                document.getElementById(`next_box_01`).click();
+            } else if (round2State === 2) {
+                round2Box2Count += 1
+                if (round2Box2Count === 2) {
+                    document.getElementById(`next_box_02`).click();
+                }
+            } else if (round2State === 3) {
+                round2Box3Count += 1
+                if (round2Box3Count === 3) {
+                    document.getElementById(`next_box_03`).click();
+                }
+            }
         }
         round2Answer.forEach((item) => {
             item.addEventListener('click', () => { round2AnswerRight(item) })
@@ -707,9 +764,11 @@
                     break
             }
         })
+        console.log(count);
         function Round3End() {
             document.getElementById('game_round3').classList.add('fade_out_round3');
             count.style.display = 'none';
+
             setTimeout(() => {
                 document.getElementById('game_round3').style.display = 'none';
                 document.getElementById('game_end').style.display = 'block';
@@ -751,6 +810,9 @@
             item.addEventListener('click', () => {
                 window.location.reload();
             })
+        });
+        document.getElementById('game_completed_btn').addEventListener('click', () => {
+            window.location.reload();
         })
     </script>
     <!-- =================  串接資料庫 ================= -->

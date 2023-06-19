@@ -4,6 +4,9 @@
 @import './common/lott.css';
 @import './common/common.css';
 
+#body {
+    display: none;
+}
 main {
     background-image: url(../images/bg.png);
     background-position: center;
@@ -12,7 +15,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
+    min-height: 730px;
 }
 
 .main_container {
@@ -20,6 +24,7 @@ main {
     width: 730px;
     height: 730px;
     background-color: #FFFFFF;
+    overflow: hidden;
 }
 
 .img_100 img {
@@ -254,6 +259,7 @@ main {
     right: 14px;
     animation: 1s blink ease-out;
     display: none;
+    cursor: default;
 }
 
 .game_round_dialogbox_all {
@@ -338,7 +344,7 @@ span {
     justify-content: space-around;
     align-items: end;
     display: none;
-    cursor: url(../images/sight.png)10 5, auto;
+    cursor: url(../images/sight.png)55 55, auto;
 }
 
 #box_1_1 {
@@ -368,7 +374,7 @@ span {
     display: flex;
     align-items: end;
     display: none;
-    cursor: url(../images/sight.png)10 5, auto;
+    cursor: url(../images/sight.png)55 55, auto;
 }
 
 #box_2_1 {
@@ -458,7 +464,7 @@ span {
     background-size: cover;
     width: 100%;
     height: 100%;
-    cursor: url(../images/sight.png)10 5, auto;
+    cursor: url(../images/sight.png)55 55, auto;
     display: none;
 }
 
@@ -518,7 +524,7 @@ span {
     position: absolute;
     top: 478px;
     right: 80px;
-    cursor: pointer;
+    cursor: url(../images/sight.png)55 55, auto;
     transition: all 0.1s ease-out;
     display: none;
 }
@@ -743,7 +749,7 @@ span {
     background-size: cover;
     width: 100%;
     height: 100%;
-    cursor: url(../images/sight.png)10 5, auto;
+    cursor: url(../images/sight.png)55 55, auto;
     display: none;
 }
 
@@ -798,7 +804,7 @@ span {
     font-size: 28px;
     line-height: 41px;
     color: #E16B69;
-    cursor: pointer;
+    cursor: url(../images/sight.png)55 55, auto;
     margin-bottom: 15px;
 }
 
@@ -900,7 +906,7 @@ span {
     background-size: cover;
     width: 100%;
     height: 100%;
-    cursor: url(../images/sight.png)10 5, auto;
+    cursor: pointer;
     display: none;
 }
 
@@ -1087,6 +1093,26 @@ span {
 }
 
 /* =============== 未滿35分頁面 =============== */
+.game_times_up_bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_times_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_times_up_text {
+    margin: 0;
+}
+
+#gameTimesUp {
+    display: none;
+}
 @media (max-width: 767.98px) {
     main {
         background-image: url(../images/bg_mb.png);
@@ -1517,7 +1543,7 @@ span {
         line-height: 20px;
     }
 
-    .form_btn {
+    .form_repeat_btn,.form_submit_btn  {
         width: 170px;
         height: 47px;
     }
@@ -1631,8 +1657,8 @@ span {
     .game_round_dialogbox {
         width: 75.205vw;
         height: 43.013vw;
-        top: 23.2vw;
-        right: 5.333vw;
+        top: 24vw;
+        right: 1.5vw;
     }
 
     .game_round_title {
@@ -1991,7 +2017,7 @@ span {
         line-height: 4.53vw;
     }
 
-    .form_btn {
+    .form_repeat_btn,.form_submit_btn {
         width: 28.8vw;
         height: 7.2vw;
     }
