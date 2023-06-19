@@ -183,10 +183,6 @@ main {
 }
 
 #startbtn {
-    background-image: url(../images/startbtn.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     position: absolute;
     right: 33px;
     top: 345px;
@@ -195,8 +191,12 @@ main {
     cursor: pointer;
 }
 
-#startbtn:hover {
-    background-image: url(../images/startbtn_hover.png);
+#startbtn img {
+    position: absolute;
+}
+
+#startbtn img:nth-of-type(2):hover {
+    opacity: 0;
 }
 
 /* =============== 開始頁面 =============== */
@@ -213,7 +213,7 @@ main {
 }
 
 #game_round1 {
-    background-image: url(../images/game_\ first.png);
+    background-image: url(../images/game_first.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -452,7 +452,7 @@ span {
 /* =============== 第一關頁面 =============== */
 /* =============== 第二關頁面 =============== */
 #game_round2 {
-    background-image: url(../images/game_\ second.png);
+    background-image: url(../images/game_second.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -509,10 +509,10 @@ span {
 }
 
 .next_box {
-    background-image: url(../images/next_box.png);
+    /* background-image: url(../images/next_box.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     width: 190px;
     height: 54px;
     position: absolute;
@@ -523,18 +523,30 @@ span {
     display: none;
 }
 
-.next_box:hover {
+/* .next_box:hover {
     top: 480px;
     background-image: url(../images/next_box_hover.png);
+} */
+
+.next_box img {
+    position: absolute;
+}
+
+.next_box img:nth-of-type(2):hover {
+    opacity: 0;
 }
 
 .next_box_last {
-    background-image: url(../images/finish_btn.png);
+    /* background-image: url(../images/finish_btn.png); */
     display: none;
 }
 
-.next_box_last:hover {
+/* .next_box_last:hover {
     background-image: url(../images/finish_btn_hover.png);
+} */
+
+.next_box_last img:nth-of-type(2):hover {
+    opacity: 0;
 }
 
 #round02_dialogbox {
@@ -725,7 +737,7 @@ span {
 /* =============== 第二關頁面 =============== */
 /* =============== 第三關頁面開始 =============== */
 #game_round3 {
-    background-image: url(../images/game_\ third.png);
+    background-image: url(../images/game_third.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -969,35 +981,39 @@ span {
     display: none;
 }
 
-.form_btn {
-    background-image: url(../images/next_box.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.form_submit_btn {
+    position: relative;
+    width: 220px;
+    height: 61px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    margin: 40px auto 20px;
+}
+
+.form_submit_btn img {
+    position: absolute;
+}
+
+.form_submit_btn img:nth-of-type(2):hover {
+    opacity: 0;
+}
+
+.form_repeat_btn {
+    position: relative;
+    margin: 0 auto;
     width: 220px;
     height: 61px;
     cursor: pointer;
     transition: all 0.1s ease-out;
 }
 
-.form_submit_btn {
-    background-image: url(../images/send_btn.png);
-    margin: 40px auto 20px;
+.form_repeat_btn img {
+    position: absolute;
 }
 
-.form_submit_btn:hover {
-    background-image: url(../images/send_btn_hover.png);
+.form_repeat_btn img:nth-of-type(2):hover {
+    opacity: 0;
 }
-
-.form_repeat_btn {
-    margin: 0 auto;
-    background-image: url(../images/again_btn.png);
-}
-
-.form_repeat_btn:hover {
-    background-image: url(../images/again_btn_hover.png);
-}
-
 
 @keyframes fade_up_2 {
     0% {
@@ -1063,11 +1079,13 @@ span {
     left: 36%;
     top: 20%;
 }
+
 #gameFormRepeat2 {
     position: absolute;
     top: 73%;
     left: 50%;
 }
+
 /* =============== 未滿35分頁面 =============== */
 @media (max-width: 767.98px) {
     main {
@@ -1529,6 +1547,7 @@ span {
         bottom: -4.1%;
         left: 6%;
     }
+
     #game_fail_title {
         width: 293.3px;
         height: 257.12px;
@@ -2000,9 +2019,11 @@ span {
     #game_fail_ip {
         width: 39.93vw;
     }
+
     #game_fail_title {
         width: 51.096vw;
         height: 44.8vw;
     }
+
     /* =============== 未滿35分結束 =============== */
 }

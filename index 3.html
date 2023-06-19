@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>動植物檢疫守門員</title>
+    <title>檢疫局 抓漏專家培育計畫</title>
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -17,13 +17,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+TC:wght@500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="preload" as="image" href="./images/bg.png">
-    <link rel="preload" as="image" href="./images/game_start.png">
-    <link rel="preload" as="image" href="./images/startbtn.png">
-    <link rel="preload" as="image" href="./images/game_first.png">
-    <link rel="preload" as="image" href="./images/game_second.png">
-    <link rel="preload" as="image" href="./images/game_third.png">
-    <link rel="preload" as="image" href="./images/form.png">
+    <!-- <link rel="preload" as="image" href="./images/bg.png">
+        <link rel="preload" as="image" href="./images/bg.png">
+    <link rel="preload" as="image" href="./images/table/start_img.png">
+    <link rel="preload" as="image" href="./images/table/img_1.png">
+    <link rel="preload" as="image" href="./images/table/img_2.png">
+    <link rel="preload" as="image" href="./images/phone/start_img.png">
+    <link rel="preload" as="image" href="./images/phone/img_1.png">
+    <link rel="preload" as="image" href="./images/phone/img_2.png">
+    <link rel="preload" as="image" href="./images/phone/form_img.png">
+    <link rel="preload" as="audio" href="./music/game_music.mp3">
+    <link rel="preload" as="audio" href="./music/correct_down.mp3">
+    <link rel="preload" as="audio" href="./music/mistake.mp3"> -->
 </head>
 
 <body>
@@ -68,10 +73,7 @@
                 <div class="score_num" id="score_num">000</div>
             </div>
             <div id="game_start">
-                <div id="startbtn" class="img_100">
-                    <img src="./images/startbtn_hover.png" alt="start btn_hover">
-                    <img src="./images/startbtn.png" alt="start btn">
-                </div>
+                <div id="startbtn"></div>
                 <div id="game_start_dialogbox">
                     <div id="game_start_txt">為增進民眾對於國際快遞或郵包途徑之檢疫宣導知曉度，讓民眾更了解違規動植物產品，提升防檢疫相關資訊認知</div>
                 </div>
@@ -164,18 +166,9 @@
                         <div class="game_round_start_btn" id="round02_start_btn">開始遊戲</div>
                     </div>
                 </div>
-                <div class="next_box img_100" id="next_box_01">
-                    <img src="./images/next_box_hover.png" alt="next_box">
-                    <img src="./images/next_box.png" alt="next_box">
-                </div>
-                <div class="next_box img_100" id="next_box_02">
-                    <img src="./images/next_box_hover.png" alt="next_box">
-                    <img src="./images/next_box.png" alt="next_box">
-                </div>
-                <div class="next_box img_100 next_box_last" id="next_box_03">
-                    <img src="./images/finish_btn_hover.png" alt="finish_btn_hover">
-                    <img src="./images/finish_btn.png" alt="finish_btn">
-                </div>
+                <div class="next_box" id="next_box_01"></div>
+                <div class="next_box" id="next_box_02"></div>
+                <div class="next_box next_box_last" id="next_box_03"></div>
                 <div id="more_all">
                     <div class="more">
                         <div class="more_txt">想了解更多</div>
@@ -272,14 +265,8 @@
                                 </div>
                             </div>
                             <div class="form_all_btn">
-                                <div class="img_100 form_submit_btn" id="gameFormSubmit">
-                                    <img src="./images/send_btn_hover.png" alt="send_btn_hover">
-                                    <img src="./images/send_btn.png" alt="send_btn">
-                                </div>
-                                <div class="img_100 form_repeat_btn" id="gameFormRepeat">
-                                    <img src="./images/again_btn_hover.png" alt="again_btn_hover">
-                                    <img src="./images/again_btn.png" alt="again_btn">
-                                </div>
+                                <div class="img_100 form_btn form_submit_btn" id="gameFormSubmit"></div>
+                                <div class="img_100 form_btn form_repeat_btn" id="gameFormRepeat"></div>
                             </div>
                         </form>
                     </div>
@@ -290,10 +277,7 @@
                 <div id="game_fail">
                     <!-- 遊戲失敗 -->
                     <div id="game_fail_title"></div>
-                    <div class="img_100 form_repeat_btn" id="gameFormRepeat2">
-                        <img src="./images/again_btn_hover.png" alt="again_btn_hover">
-                        <img src="./images/again_btn.png" alt="again_btn">
-                    </div>
+                    <div class="img_100 form_btn form_repeat_btn" id="gameFormRepeat2"></div>
                     <div class="img_100" id="game_fail_ip">
                         <img src="./images/people_dog_4.png" alt="people_dog_4">
                     </div>
@@ -398,14 +382,18 @@
             gameRound1Pack1Success = true
             setTimeout(() => {
                 document.getElementById("pack_all").style.display = "none";
-                // document.getElementById("success01").style.display = "none";
-                // document.getElementById("mistake_left01").style.display ="none";
-                // document.getElementById("mistake_right01").style.display ="none";
+                document.getElementById("success01").style.display = "none";
+                document.getElementById("mistake_left01").style.display =
+                    "none";
+                document.getElementById("mistake_right01").style.display =
+                    "none";
                 game1End.play();
                 setTimeout(() => {
                     game1End.stop();
-                    document.getElementById("game1_end").style.display = "none";
-                    document.getElementById("game2_start").style.display = "block";
+                    document.getElementById("game1_end").style.display =
+                        "none";
+                    document.getElementById("game2_start").style.display =
+                        "block";
                     game2Start.play();
                     setTimeout(() => {
                         game2Start.stop();
@@ -435,10 +423,16 @@
                     "none";
             }, 1000);
             setTimeout(() => {
-                document.getElementById("pack_all_02").style.display = "none";
-                // document.getElementById("success02").style.display ="none";
-                // document.getElementById("mistake_left02").style.display = "none";
-                // document.getElementById("mistake_right02").style.display = "none";
+                document.getElementById("pack_all_02").style.display =
+                    "none";
+                document.getElementById("success02").style.display =
+                    "none";
+                document.getElementById(
+                    "mistake_left02"
+                ).style.display = "none";
+                document.getElementById(
+                    "mistake_right02"
+                ).style.display = "none";
                 game2End.play();
             }, 1500);
             setTimeout(() => {
@@ -463,24 +457,17 @@
             }, 1000);
         }
         document.getElementById("box_1_1").addEventListener("click", () => {
-            document.getElementById("mistake_left01").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("mistake_left01").style.display = "none";
-            }, 300);
+            document.getElementById("mistake_left01").style.display =
+                "block";
         });
         document.getElementById("box_1_3").addEventListener("click", () => {
-            document.getElementById("mistake_right01").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("mistake_right01").style.display = "none";
-            }, 300);
+            document.getElementById("mistake_right01").style.display =
+                "block";
         });
         document.getElementById("box_1_2").addEventListener("click", () => {
             document.getElementById("box_1_2").style.pointerEvents = "none";
             document.getElementById("add_01").style.display = "block";
             document.getElementById("success01").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("success01").style.display = "none";
-            }, 300);
             addScore(5)
             setTimeout(() => {
                 document.getElementById("add_01").style.display = "none";
@@ -490,24 +477,17 @@
             gameRound1Pack1();
         });
         document.getElementById("box_2_1").addEventListener("click", () => {
-            document.getElementById("mistake_right02").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("mistake_right02").style.display = "none";
-            }, 300);
+            document.getElementById("mistake_right02").style.display =
+                "block";
         });
         document.getElementById("box_2_2").addEventListener("click", () => {
-            document.getElementById("mistake_left02").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("mistake_left02").style.display = "none";
-            }, 300);
+            document.getElementById("mistake_left02").style.display =
+                "block";
         });
         document.getElementById("box_2_3").addEventListener("click", () => {
             document.getElementById("box_2_3").style.pointerEvents = "none";
             document.getElementById("add_02").style.display = "block";
             document.getElementById("success02").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("success02").style.display = "none";
-            }, 300);
             clearInterval(timerRound1Pack2)
             addScore(5);
             setTimeout(() => {
@@ -571,7 +551,6 @@
         })
         document.getElementById('round02_start_btn').addEventListener('click', () => {
             document.getElementById('round02_dialogbox').style.display = 'none';
-            document.getElementById('round2_q1').style.display = 'block';
             document.getElementById('next_box_01').style.display = 'block';
             // 開始倒數三十秒
             timerRound2 = setInterval(round2Timer, 1000);
@@ -611,7 +590,7 @@
             if (timerCount === 0) {
                 clearInterval(timerRound3)
                 // alert('結束第三關');
-                Round3End();
+
             }
         }
         document.getElementById('next_box_03').addEventListener('click', () => {
@@ -629,7 +608,7 @@
 
         document.getElementById('round03_start_btn').addEventListener('click', () => {
             document.getElementById('round03_dialogbox').style.display = 'none';
-            document.getElementById('round3_q1').style.display = 'block';
+            // document.getElementById('next_box_01').style.display = 'block';
             // 開始倒數十五秒
             timerCount = 15;
             timerRound3 = setInterval(timerRound3Function, 1000);
@@ -680,7 +659,7 @@
                         document.getElementById("round3_correct_txt").innerText = "擅自輸入違法動植物產品，最高罰金300萬元";
                         // console.log('答對第二題');
                         // alert('結束第三關func裡面可以放 FinalScore ()');
-                        // Round3End();
+                        Round3End();
                         break
                 }
                 document.getElementById("round3_error_popup").style.display = "block";
