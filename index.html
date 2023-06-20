@@ -149,7 +149,7 @@
                     <div class="img_100 round2_answer" id="round2_q2_sausage"><img src="./images/sausage.png"
                             alt="sausage"></div>
                     <div class="img_100 round2_answer" id="round2_q2_egg"><img src="./images/egg.png" alt="egg"></div>
-                    <div class="img_100 round2_wrong" id="round2_q2_noodle"><img src="./images/noodle.png" alt="noodle">
+                    <div class="img_100 round2_answer" id="round2_q2_noodle"><img src="./images/noodle.png" alt="noodle">
                     </div>
                 </div>
                 <div id="round2_q3" class="fade_in_round2">
@@ -628,7 +628,7 @@
         let round2Box2Count = 0;
         let round2Box3Count = 0;
         function round2AnswerRight(item) {
-            addScore(5)
+            addScore(5);
             item.style.display = 'none';
             if (round2State === 1) {
                 round2Box1Count += 1
@@ -637,7 +637,7 @@
                 }
             } else if (round2State === 2) {
                 round2Box2Count += 1
-                if (round2Box2Count === 2) {
+                if (round2Box2Count === 3) {
                     document.getElementById(`next_box_02`).click();
                 }
             } else if (round2State === 3) {
