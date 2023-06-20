@@ -323,14 +323,14 @@
                 <img src="./images/logo_2.png" alt="" />
             </div>
             <div class="footer_text pc_img">
-                行政院農業委員會 動植物防檢疫局 版權所有©copyright 2023
+                行政院農業委員會 動植物防檢疫局 版權所有©Copyright 2023
             </div>
             <div class="mb_img">
                 <div class="footer_icon">
                     <img src="./images/logo_2_mb.png" alt="" />
                 </div>
                 <div class="footer_text">
-                    行政院農業委員會 動植物防檢疫局<br>版權所有©copyright 2023
+                    行政院農業委員會 動植物防檢疫局<br>版權所有©Copyright 2023
                 </div>
             </div>
         </div>
@@ -620,10 +620,9 @@
             item.style.display = 'none';
             if (round2State === 1) {
                 round2Box1Count += 1
-                // if(round2Box1Count === 2){
-
+                if(round2Box1Count === 2){
                     document.getElementById(`next_box_01`).click();
-                // }
+                }
             } else if (round2State === 2) {
                 round2Box2Count += 1
                 if (round2Box2Count === 2) {
@@ -892,7 +891,7 @@
                     email = $("#email").val();
                 $("#gameFormSubmit").off("click");
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     async: false,
                     dataType: "jsonp",
                     url: "https://www.sales-frontier.com/adform/baphiq2023event/action1.php",
