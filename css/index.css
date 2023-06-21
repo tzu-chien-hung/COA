@@ -165,7 +165,7 @@ main {
     }
 }
 
-#game_start_dialogbox {
+/* #game_start_dialogbox {
     background-image: url(../images/dialogbox_1.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -186,7 +186,7 @@ main {
     font-size: 24px;
     line-height: 35px;
     color: #5E895E;
-}
+} */
 
 #startbtn {
     position: absolute;
@@ -1162,7 +1162,7 @@ span {
         left: 369px;
         top: 16px;
     }
-
+/* 
     #game_start_dialogbox {
         width: 300.118px;
         height: 165.312px;
@@ -1176,7 +1176,7 @@ span {
         width: 270px;
         font-size: 18.638px;
         line-height: 26.021px;
-    }
+    } */
 
     #startbtn {
         right: 17px;
@@ -1641,7 +1641,7 @@ span {
         top: 2.603vw;
     }
 
-    #game_start_dialogbox {
+    /* #game_start_dialogbox {
         width: 52.285vw;
         height: 28.8vw;
         right: 3vw;
@@ -1654,7 +1654,7 @@ span {
         width: 47.5vw;
         font-size: 3.2vw;
         line-height: 4.533vw;
-    }
+    } */
 
     #startbtn {
         right: 3vw;
