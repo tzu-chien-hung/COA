@@ -180,7 +180,7 @@ main {
 
 #game_start_txt {
     position: absolute;
-    right: 16px;
+    right: 5px;
     bottom: 32px;
     width: 325px;
     font-size: 22px;
@@ -635,7 +635,7 @@ span {
     position: absolute;
     top: 0px;
     left: 160px;
-    width: 142px;
+    width: 132.5px;
     z-index: 1;
 }
 
@@ -649,17 +649,17 @@ span {
 
 #round2_q2_egg {
     position: absolute;
-    top: 0px;
-    left: 250px;
-    width: 100px;
+    top: -7px;
+    left: 275px;
+    width: 90px;
     z-index: 3;
 }
 
 #round2_q2_noodle {
     position: absolute;
-    bottom: -11px;
-    right: 0px;
-    width: 167px;
+    bottom: -6px;
+    right: 31px;
+    width: 115.33px;
     z-index: 4;
 }
 
@@ -1171,7 +1171,7 @@ span {
     }
 
     #game_start_txt {
-        right: 16px;
+        right: 8px;
         bottom: 25px;
         width: 270px;
         font-size: 18.638px;
@@ -1385,7 +1385,7 @@ span {
     #round2_q2_coffee {
         top: 1.5px;
         left: 122px;
-        width: 111.21px;
+        width: 103.5px;
     }
 
     #round2_q2_sausage {
@@ -1395,12 +1395,14 @@ span {
     }
 
     #round2_q2_egg {
-        left: 196px;
-        width: 85px;
+        left: 210px;
+        width: 75px;
     }
 
     #round2_q2_noodle {
-        width: 136.06px;
+        width: 100px;
+        bottom: -5px;
+        right: 14px;
     }
 
     #round2_q3 {
@@ -1649,7 +1651,7 @@ span {
     }
 
     #game_start_txt {
-        right: 1.4vw;
+        right: 0;
         bottom: 4vw;
         width: 47.5vw;
         font-size: 3.2vw;
@@ -1869,23 +1871,25 @@ span {
     #round2_q2_coffee {
         top: -0.2vw;
         left: 22vw;
-        width: 19.373vw;
+        width: 18.2vw;
     }
 
     #round2_q2_sausage {
-        top: 3.1vw;
+        top: 3.25vw;
         left: 11vw;
         width: 14.872vw;
     }
 
     #round2_q2_egg {
-        left: 35vw;
-        width: 14vw;
+        top: -1vw;
+        left: 38vw;
+        width: 12vw;
     }
 
     #round2_q2_noodle {
-        width: 21.867vw;
-        bottom: -2vw;
+        width: 16vw;
+        bottom: -1vw;
+        right: 4.3vw;
     }
 
     #round2_q3 {
