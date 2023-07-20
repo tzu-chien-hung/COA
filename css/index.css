@@ -180,12 +180,13 @@ main {
 
 #game_start_txt {
     position: absolute;
-    right: 5px;
-    bottom: 32px;
-    width: 325px;
-    font-size: 22px;
+    right: 20px;
+    bottom: 18px;
+    width: 322px;
+    font-size: 20px;
     line-height: 30px;
     color: #5E895E;
+    letter-spacing: 0;
 }
 
 #startbtn {
@@ -658,8 +659,9 @@ span {
 #round2_q2_noodle {
     position: absolute;
     bottom: -6px;
-    right: 31px;
-    width: 115.33px;
+    bottom: 0px;
+    right: 52px;
+    width: 83px;
     z-index: 4;
 }
 
@@ -908,6 +910,10 @@ span {
 
 /* =============== 第三關頁面結束 =============== */
 /* =============== 表單頁面 =============== */
+#game_join_form {
+    display: none;
+}
+
 #game_end {
     background-image: url(../images/form.png);
     background-position: center;
@@ -941,7 +947,7 @@ span {
 }
 
 #game_form_title {
-    background-image: url(../images/dialogbox_3.png);
+    background-image: url(../images/dialogbox_4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1082,9 +1088,13 @@ span {
     bottom: -4.1%;
     left: 6%;
 }
-
-#game_fail_title {
+#game_sucess_title {
     background-image: url(../images/dialogbox_4.png);
+}
+#game_fail_title {
+    background-image: url(../images/dialogbox_3.png);
+}
+.game_finish_title {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1400,9 +1410,8 @@ span {
     }
 
     #round2_q2_noodle {
-        width: 100px;
-        bottom: -5px;
-        right: 14px;
+    width: 65px;
+    right: 42px;
     }
 
     #round2_q3 {
@@ -1592,7 +1601,7 @@ span {
         left: 6%;
     }
 
-    #game_fail_title {
+    .game_finish_title {
         width: 293.3px;
         height: 257.12px;
     }
@@ -1887,9 +1896,8 @@ span {
     }
 
     #round2_q2_noodle {
-        width: 16vw;
-        bottom: -1vw;
-        right: 4.3vw;
+    width: 11.5vw;
+    right: 7.5vw;
     }
 
     #round2_q3 {
@@ -2079,7 +2087,7 @@ span {
         width: 39.93vw;
     }
 
-    #game_fail_title {
+    .game_finish_title {
         width: 51.096vw;
         height: 44.8vw;
     }

@@ -83,6 +83,11 @@
     color: #48362D;
 }
 
+.act_flex_txt_red {
+    display: inline;
+    color: #E16B69;
+}
+
 .act_content_txt {
     font-size: 18px;
     line-height: 30px;
@@ -213,7 +218,7 @@
     .br_mb {
         display: block;
     }
-    
+
     .act_popup_bg {
         width: 92vw;
         height: 88vw;
@@ -298,8 +303,9 @@
 
 @media (max-width: 575.68px) {
     .act_popup_bg {
-       height: 115vw;
+        height: 115vw;
     }
+
     .act_content_all {
         width: 95%;
         height: 76vw;

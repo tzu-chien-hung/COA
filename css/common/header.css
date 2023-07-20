@@ -218,7 +218,6 @@ a {
 
     #nav-toggle:checked~.header_link_all {
         transform: none;
-        position: absolute;
         top: 79px;
         z-index: 0;
     }
@@ -264,7 +263,8 @@ a {
     }
 
     .header_link_all {
-        height: 180px;
+        /* height: 180px; */
+        height: 120px;
         top: 79px;
     }
 
