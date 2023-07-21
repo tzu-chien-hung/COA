@@ -1082,7 +1082,7 @@ span {
     display: none;
 }
 
-#game_fail_ip {
+.game_fail_ip {
     width: 291.5px;
     position: absolute;
     bottom: -4.1%;
@@ -1105,7 +1105,7 @@ span {
     top: 20%;
 }
 
-#gameFormRepeat2 {
+#gameFormRepeat2, #gameFormRepeat3 {
     position: absolute;
     top: 73%;
     left: 50%;
@@ -1594,7 +1594,7 @@ span {
 
     /* =============== 表單頁面結束 =============== */
     /* =============== 未滿35分開始 =============== */
-    #game_fail_ip {
+    .game_fail_ip {
         width: 229.2px;
         position: absolute;
         bottom: -4.1%;
@@ -2083,7 +2083,7 @@ span {
 
     /* =============== 表單結束 =============== */
     /* =============== 未滿35分開始 =============== */
-    #game_fail_ip {
+    .game_fail_ip {
         width: 39.93vw;
     }
 
